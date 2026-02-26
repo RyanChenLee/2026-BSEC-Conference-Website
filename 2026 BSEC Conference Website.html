@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entrepreneurs for Impact — 20th Annual BSEC Conference · April 24, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+/* ─────────────────────────────────────────
+   RESET & ROOT
+───────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --g-deep:   #1B4332;
+  --g-mid:    #2D6A4F;
+  --g-light:  #40916C;
+  --g-pale:   #D8F3DC;
+  --cream:    #F7F3ED;
+  --cream-dk: #EDE7DC;
+  --gold:     #B8811F;
+  --gold-lt:  #D4A03A;
+  --gold-pale:#F5E6C8;
+  --white:    #FFFFFF;
+  --ink:      #161612;
+  --ink-mid:  #3A3A34;
+  --ink-soft: #6A6A5E;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans:  'Outfit', sans-serif;
+  --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+html { scroll-behavior: smooth; font-size: 16px; }
+body { font-family: var(--sans); background: var(--cream); color: var(--ink); overflow-x: hidden; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+/* ─────────────────────────────────────────
+   UTILITY
+───────────────────────────────────────── */
+.container { max-width: 1140px; margin: 0 auto; padding: 0 2rem; }
+.tag {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.9rem;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ─────────────────────────────────────────
+   NAV
+───────────────────────────────────────── */
+#nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  padding: 1.4rem 2rem;
+  display: flex; justify-content: space-between; align-items: center;
+  transition: background 0.4s, padding 0.4s, box-shadow 0.4s;
+}
+#nav.solid {
+  background: rgba(22, 50, 38, 0.97);
+  backdrop-filter: blur(12px);
+  padding: 0.9rem 2rem;
+  box-shadow: 0 1px 30px rgba(0,0,0,0.25);
+}
+.nav-brand {
+  display: flex; flex-direction: column; line-height: 1;
+}
+.nav-brand-top {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 0.03em;
+}
+.nav-brand-sub {
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-top: 0.15rem;
+}
+.nav-links {
+  display: flex; gap: 2rem; align-items: center;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--gold-lt); }
+.nav-cta {
+  background: var(--gold) !important;
+  color: var(--white) !important;
+  padding: 0.55rem 1.3rem !important;
+  border-radius: 1px;
+  transition: background 0.2s !important;
+}
+.nav-cta:hover { background: var(--gold-lt) !important; }
+.nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.25rem; }
+.nav-hamburger span {
+  display: block; width: 22px; height: 1.5px;
+  background: var(--white); margin: 5px 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* ─────────────────────────────────────────
+   HERO
+───────────────────────────────────────── */
+#hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  background: var(--g-deep);
+}
+#hero-canvas {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  opacity: 0.4;
+}
+.hero-grain {
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.5;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(165deg, rgba(27,67,50,0.3) 0%, rgba(10,25,18,0.88) 100%);
+}
+.hero-content {
+  position: relative; z-index: 2;
+  text-align: center;
+  padding: 8rem 2rem 5rem;
+  max-width: 900px;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  border: 1px solid rgba(184,129,31,0.45);
+  background: rgba(184,129,31,0.1);
+  color: var(--gold-lt);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.5rem 1.2rem;
+  border-radius: 100px;
+  margin-bottom: 2.2rem;
+  opacity: 0;
+  animation: fadeUp 0.9s 0.15s var(--ease) forwards;
+}
+.hero-badge i { font-size: 0.65rem; }
+.hero-eyebrow {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 1.1rem;
+  opacity: 0;
+  animation: fadeUp 0.9s 0.3s var(--ease) forwards;
+}
+.hero-title {
+  font-family: var(--serif);
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 300;
+  line-height: 1.0;
+  color: var(--white);
+  letter-spacing: -0.01em;
+  margin-bottom: 1.4rem;
+  opacity: 0;
+  animation: fadeUp 1s 0.45s var(--ease) forwards;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--gold-lt);
+  font-weight: 300;
+}
+.hero-sub {
+  font-family: var(--serif);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+  opacity: 0;
+  animation: fadeUp 0.9s 0.62s var(--ease) forwards;
+}
+.hero-meta {
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.09em;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: fadeUp 0.9s 0.78s var(--ease) forwards;
+}
+.hero-meta i { color: var(--gold); margin-right: 0.3rem; }
+.hero-meta span { margin: 0 0.5rem; color: rgba(255,255,255,0.2); }
+.hero-ctas {
+  display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 0.9s 0.94s var(--ease) forwards;
+}
+.btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 1rem 2.2rem;
+  border-radius: 1px;
+  transition: all 0.25s var(--ease);
+  cursor: pointer;
+}
+.btn-gold {
+  background: var(--gold);
+  color: var(--white);
+}
+.btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(184,129,31,0.35); }
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,0.35);
+}
+.btn-outline:hover { border-color: var(--gold-lt); color: var(--gold-lt); transform: translateY(-2px); }
+.hero-scroll-hint {
+  position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+  color: rgba(255,255,255,0.25);
+  font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+  animation: fadeIn 1s 2s forwards; opacity: 0;
+}
+.scroll-line {
+  width: 1px; height: 36px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.25), transparent);
+  animation: scrollPulse 2s 2s infinite;
+}
+
+/* ─────────────────────────────────────────
+   SVG DIVIDERS
+───────────────────────────────────────── */
+.divider { display: block; width: 100%; overflow: hidden; line-height: 0; }
+.divider svg { display: block; width: 100%; }
+
+/* ─────────────────────────────────────────
+   GLANCE STRIP
+───────────────────────────────────────── */
+#glance {
+  background: var(--g-deep);
+  padding: 0 0 5rem;
+}
+.glance-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.glance-tile {
+  padding: 2.8rem 2rem;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+  transition: background 0.3s;
+}
+.glance-tile:last-child { border-right: none; }
+.glance-tile:hover { background: rgba(255,255,255,0.04); }
+.glance-icon {
+  font-size: 1.3rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  display: block;
+}
+.glance-value {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 0.4rem;
+}
+.glance-label {
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+
+/* ─────────────────────────────────────────
+   ABOUT
+───────────────────────────────────────── */
+#about {
+  background: var(--cream);
+  padding: 8rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 6rem;
+  align-items: center;
+}
+.about-quote-side { position: relative; }
+.about-quote-mark {
+  font-family: var(--serif);
+  font-size: 12rem;
+  line-height: 0.7;
+  color: var(--cream-dk);
+  position: absolute;
+  top: -1rem; left: -2rem;
+  user-select: none;
+  pointer-events: none;
+}
+.about-quote {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.3;
+  color: var(--g-deep);
+  position: relative; z-index: 1;
+  padding-left: 1rem;
+  border-left: 3px solid var(--gold);
+}
+.about-attribution {
+  margin-top: 1.5rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  padding-left: 1rem;
+}
+.about-body h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--g-deep);
+  margin-bottom: 1.5rem;
+}
+.about-body p {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--ink-mid);
+  margin-bottom: 1.2rem;
+}
+.about-history {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--cream-dk);
+  border-left: 3px solid var(--g-light);
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: var(--ink-mid);
+  font-style: italic;
+}
+
+/* ─────────────────────────────────────────
+   PROGRAM / WHAT TO EXPECT
+───────────────────────────────────────── */
+#program {
+  background: var(--g-deep);
+  padding: 8rem 0;
+}
+#program .tag { color: var(--gold-lt); }
+#program h2 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+}
+#program .section-sub {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.5);
+  max-width: 520px;
+  line-height: 1.7;
+  margin-bottom: 4rem;
+}
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5px;
+  background: rgba(255,255,255,0.08);
+}
+.program-card {
+  background: rgba(27,67,50,0.95);
+  padding: 3rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+.program-card:hover { background: var(--g-mid); }
+.program-card::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.4s var(--ease);
+}
+.program-card:hover::after { transform: scaleX(1); }
+.program-number {
+  font-family: var(--serif);
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.07);
+  line-height: 1;
+  position: absolute;
+  top: 1.5rem; right: 2rem;
+}
+.program-icon {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: rgba(184,129,31,0.15);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.program-icon i { color: var(--gold-lt); font-size: 1rem; }
+.program-card h3 {
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+  line-height: 1.25;
+}
+.program-card p {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 1rem;
+}
+.tracks-list {
+  list-style: none;
+  display: flex; flex-direction: column; gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+.tracks-list li {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.65);
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.tracks-list li::before {
+  content: '';
+  width: 16px; height: 1px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+.award-badge {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  background: rgba(184,129,31,0.15);
+  border: 1px solid rgba(184,129,31,0.3);
+  color: var(--gold-lt);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.8rem;
+  border-radius: 100px;
+  margin-top: 0.75rem;
+}
+
+/* ─────────────────────────────────────────
+   SPEAKERS
+───────────────────────────────────────── */
+#speakers {
+  background: #EEE8DC;
+  padding: 8rem 0;
+}
+#speakers h2 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  color: var(--g-deep);
+  margin-bottom: 0.6rem;
+}
+.speakers-notice {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--g-deep);
+  color: rgba(255,255,255,0.8);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  padding: 0.5rem 1rem;
+  border-radius: 1px;
+  margin-bottom: 3rem;
+}
+.speakers-notice i { color: var(--gold-lt); }
+.speakers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 1.5rem;
+}
+/* <!-- REPLACE: speaker-card data — swap placeholder content with real speaker info --> */
+.speaker-card {
+  background: var(--white);
+  padding: 2rem 1.2rem;
+  text-align: center;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.speaker-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(27,67,50,0.12);
+}
+/* <!-- REPLACE: set background-image: url('headshot.jpg') on .speaker-avatar via inline style --> */
+.speaker-avatar {
+  width: 88px; height: 88px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--g-mid), var(--g-deep));
+  margin: 0 auto 1.2rem;
+  background-size: cover; background-position: center;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.35);
+}
+.speaker-name {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--g-deep);
+  margin-bottom: 0.25rem;
+}
+.speaker-role { font-size: 0.78rem; color: var(--ink-soft); line-height: 1.5; }
+.speaker-org { font-size: 0.75rem; font-weight: 600; color: var(--gold); margin-top: 0.2rem; }
+
+/* ─────────────────────────────────────────
+   AGENDA
+───────────────────────────────────────── */
+#agenda {
+  background: var(--white);
+  padding: 8rem 0;
+}
+#agenda h2 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  color: var(--g-deep);
+  margin-bottom: 0.6rem;
+}
+.agenda-note {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--gold-pale);
+  border: 1px solid rgba(184,129,31,0.25);
+  color: var(--gold);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 0.45rem 1rem;
+  border-radius: 1px;
+  margin-bottom: 3.5rem;
+}
+/* <!-- REPLACE: update agenda items with final times, session titles, and speakers --> */
+.agenda-timeline { position: relative; max-width: 760px; }
+.agenda-timeline::before {
+  content: '';
+  position: absolute; top: 10px; bottom: 10px; left: 96px;
+  width: 1px; background: var(--cream-dk);
+}
+.agenda-item {
+  display: flex; align-items: flex-start; gap: 2rem;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--cream-dk);
+  position: relative;
+}
+.agenda-item:last-child { border-bottom: none; }
+.agenda-time {
+  flex-shrink: 0; width: 84px;
+  text-align: right;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  letter-spacing: 0.04em;
+  padding-top: 0.15rem;
+}
+.agenda-node {
+  flex-shrink: 0;
+  position: relative; z-index: 1;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--gold);
+  margin-top: 0.22rem;
+}
+.agenda-node.major { background: var(--g-deep); box-shadow: 0 0 0 3px var(--gold-pale); }
+.agenda-content { flex: 1; }
+.agenda-content h4 {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--g-deep);
+  margin-bottom: 0.2rem;
+}
+.agenda-content p { font-size: 0.84rem; color: var(--ink-soft); line-height: 1.6; }
+.agenda-tracks {
+  display: flex; flex-wrap: wrap; gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+.agenda-track-pill {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--g-deep);
+  background: var(--g-pale);
+  padding: 0.25rem 0.7rem;
+  border-radius: 100px;
+}
+
+/* ─────────────────────────────────────────
+   SPONSORS
+───────────────────────────────────────── */
+#sponsors {
+  background: var(--cream);
+  padding: 8rem 0;
+}
+#sponsors h2 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  color: var(--g-deep);
+  margin-bottom: 0.8rem;
+}
+.sponsors-sub {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  max-width: 600px;
+  line-height: 1.75;
+  margin-bottom: 4rem;
+}
+/* <!-- REPLACE: add actual sponsor logos as <img> inside .sponsor-logo-box --> */
+.sponsor-tier { margin-bottom: 3rem; }
+.tier-header {
+  display: flex; align-items: center; gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+.tier-name {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+.tier-line { flex: 1; height: 1px; background: var(--cream-dk); }
+.tier-logos { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+.sponsor-logo-box {
+  height: 70px;
+  padding: 0 1.8rem;
+  background: var(--white);
+  border: 1px solid var(--cream-dk);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--g-deep);
+  transition: border-color 0.25s, box-shadow 0.25s;
+  min-width: 200px;
+}
+.sponsor-logo-box:hover { border-color: var(--g-light); box-shadow: 0 4px 16px rgba(27,67,50,0.08); }
+.sponsor-logo-box.placeholder {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  border-style: dashed;
+  min-width: 160px;
+}
+.sponsor-cta-box {
+  margin-top: 4rem;
+  padding: 3rem;
+  background: var(--g-deep);
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 2rem;
+}
+.sponsor-cta-box h3 {
+  font-family: var(--serif);
+  font-size: 1.7rem;
+  font-weight: 300;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+.sponsor-cta-box p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.55);
+  max-width: 420px;
+  line-height: 1.7;
+}
+.sponsor-cta-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+.btn-white {
+  background: var(--white);
+  color: var(--g-deep);
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.9rem 1.8rem;
+  border-radius: 1px;
+  transition: background 0.2s, transform 0.2s;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+}
+.btn-white:hover { background: var(--gold-pale); transform: translateY(-2px); }
+.btn-ghost-white {
+  background: transparent;
+  color: rgba(255,255,255,0.7);
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.9rem 1.8rem;
+  border-radius: 1px;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: all 0.2s;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+}
+.btn-ghost-white:hover { border-color: rgba(255,255,255,0.5); color: var(--white); }
+
+/* ─────────────────────────────────────────
+   TICKET BANNER
+───────────────────────────────────────── */
+#tickets {
+  background: var(--g-deep);
+  padding: 7rem 0;
+  position: relative;
+  overflow: hidden;
+}
+#tickets::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(184,129,31,0.12) 0%, transparent 65%);
+}
+.tickets-inner {
+  position: relative; z-index: 1;
+  max-width: 780px; margin: 0 auto;
+  text-align: center; padding: 0 2rem;
+}
+.tickets-inner h2 {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+.tickets-inner h2 em { font-style: italic; color: var(--gold-lt); }
+.ticket-prices {
+  display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.ticket-price-item { text-align: center; }
+.ticket-price-amount {
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--gold-lt);
+  line-height: 1;
+}
+.ticket-price-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-top: 0.3rem;
+}
+.tickets-copy {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+  font-family: var(--serif);
+}
+/* <!-- REPLACE: update urgency copy and deadline when early bird ends --> */
+
+/* ─────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────── */
+footer {
+  background: #0F2A1E;
+  padding: 4rem 0 2.5rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 2rem;
+}
+.footer-brand h3 {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.3rem;
+}
+.footer-brand p {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.7;
+  margin-top: 0.5rem;
+}
+.footer-brand a {
+  color: var(--gold-lt);
+  font-size: 0.82rem;
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  margin-top: 1rem;
+  transition: color 0.2s;
+}
+.footer-brand a:hover { color: var(--gold); }
+.footer-col h4 {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 1.2rem;
+}
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 0.6rem; }
+.footer-col ul li a {
+  font-size: 0.84rem;
+  color: rgba(255,255,255,0.55);
+  transition: color 0.2s;
+}
+.footer-col ul li a:hover { color: var(--gold-lt); }
+.footer-bottom {
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+}
+.footer-bottom p {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.25);
+}
+
+/* ─────────────────────────────────────────
+   KEYFRAMES
+───────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.25; transform: scaleY(1); }
+  50%       { opacity: 0.6;  transform: scaleY(1.3); }
+}
+
+/* ─────────────────────────────────────────
+   MOBILE RESPONSIVE
+───────────────────────────────────────── */
+@media (max-width: 900px) {
+  .glance-grid { grid-template-columns: repeat(2, 1fr); }
+  .glance-tile:nth-child(2) { border-right: none; }
+  .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .about-quote-mark { font-size: 7rem; }
+  .program-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  #nav { padding: 1rem 1.2rem; }
+  .nav-links { display: none; }
+  .nav-links.open {
+    display: flex; flex-direction: column; gap: 1rem;
+    position: fixed; inset: 0; top: 60px;
+    background: rgba(22,50,38,0.98);
+    padding: 2rem;
+    align-items: flex-start;
+  }
+  .nav-links.open a { font-size: 1rem; }
+  .nav-hamburger { display: block; }
+  .hero-content { padding: 7rem 1.5rem 4rem; }
+  .glance-grid { grid-template-columns: 1fr 1fr; }
+  .container { padding: 0 1.2rem; }
+  .about-grid { gap: 2rem; }
+  .program-grid { gap: 1px; }
+  .sponsor-cta-box { padding: 2rem; }
+  .ticket-prices { gap: 2rem; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .agenda-timeline::before { left: 84px; }
+  .agenda-time { width: 72px; font-size: 0.72rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav id="nav">
+  <a href="#hero" class="nav-brand">
+    <span class="nav-brand-top">BSEC Conference 2026</span>
+    <span class="nav-brand-sub">Entrepreneurs for Impact</span>
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#program">Program</a></li>
+    <li><a href="#speakers">Speakers</a></li>
+    <li><a href="#agenda">Agenda</a></li>
+    <li><a href="#sponsors">Sponsors</a></li>
+    <li><a href="https://cglink.me/22L/r375910" target="_blank" class="nav-cta">Get Tickets</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-grain"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <i class="fas fa-leaf"></i>
+      Celebrating 20 Years of Sustainability Leadership at Babson
+    </div>
+    <p class="hero-eyebrow">20th Annual Babson Sustainability &amp; Energy Conference</p>
+    <h1 class="hero-title">Entrepreneurs<br><em>for Impact</em></h1>
+    <p class="hero-sub">"The entrepreneurs who turned sustainability challenges into scalable solutions."</p>
+    <p class="hero-meta">
+      <i class="far fa-calendar"></i>Friday, April 24, 2026
+      <span>·</span>
+      <i class="fas fa-map-marker-alt"></i>Knight Auditorium, Babson College
+      <span>·</span>
+      <i class="fas fa-map-pin"></i>Wellesley, MA
+    </p>
+    <div class="hero-ctas">
+      <a href="https://cglink.me/22L/r375910" target="_blank" class="btn btn-gold">
+        <i class="fas fa-ticket"></i> Get Your Ticket
+      </a>
+      <a href="mailto:gradsustainability@babson.edu" class="btn btn-outline">
+        <i class="fas fa-handshake"></i> Become a Sponsor
+      </a>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ═══ AT A GLANCE ═══ -->
+<section id="glance">
+  <div class="divider" style="margin-top:-2px;">
+    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,0 L1440,60 L1440,0 Z" fill="#1B4332"/>
+    </svg>
+  </div>
+  <div class="container">
+    <div class="glance-grid">
+      <div class="glance-tile reveal">
+        <i class="glance-icon far fa-calendar-alt"></i>
+        <div class="glance-value">April 24</div>
+        <div class="glance-label">Friday, 2026 · 8AM – 6PM</div>
+      </div>
+      <div class="glance-tile reveal reveal-delay-1">
+        <i class="glance-icon fas fa-map-marker-alt"></i>
+        <div class="glance-value">Knight Aud.</div>
+        <div class="glance-label">Babson College, Wellesley MA</div>
+      </div>
+      <div class="glance-tile reveal reveal-delay-2">
+        <i class="glance-icon fas fa-users"></i>
+        <div class="glance-value">150–200</div>
+        <div class="glance-label">Expected Attendees</div>
+      </div>
+      <div class="glance-tile reveal reveal-delay-3">
+        <i class="glance-icon fas fa-trophy"></i>
+        <div class="glance-value">20th Annual</div>
+        <div class="glance-label">BSEC Conference</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-quote-side reveal">
+        <div class="about-quote-mark">"</div>
+        <blockquote class="about-quote">
+          "This is where the next 20 years begins."
+        </blockquote>
+        <p class="about-attribution">— BSEC 20th Annual Conference, April 2026</p>
+      </div>
+      <div class="about-body reveal reveal-delay-1">
+        <span class="tag">About the Conference</span>
+        <h2>A milestone two decades in the making</h2>
+        <p>In 2006, a vision was born at Babson College: to create a community where entrepreneurs could tackle the world's most pressing sustainability and energy challenges. Two decades later, <em>Entrepreneurs for Impact</em> brings that community back together.</p>
+        <p>Join students, alumni, founders, investors, and ecosystem partners for a day of bold ideas, high-impact networking, and honest conversations about building ventures that matter.</p>
+        <p>This isn't just another conference. It's a celebration of 20 years of student leadership, innovation, and the entrepreneurs who've turned sustainability challenges into scalable solutions — and a reunion of the founders, alumni, and partners who built this community from the ground up.</p>
+        <div class="about-history">
+          From the wind turbine that launched with our club in 2008, to solar panels launching on campus this spring, to the ventures being built at Babson today — this conference tells the story of what's possible when entrepreneurs commit to impact.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROGRAM ═══ -->
+<section id="program">
+  <div class="container">
+    <span class="tag reveal">What to Expect</span>
+    <h2 class="reveal reveal-delay-1">A full day of bold ideas<br>and real connections</h2>
+    <p class="section-sub reveal reveal-delay-2">Four tracks. One keynote. A showcase. An inaugural award. And the community that makes it all matter.</p>
+    <div class="program-grid">
+
+      <div class="program-card reveal">
+        <span class="program-number">01</span>
+        <div class="program-icon"><i class="fas fa-microphone-lines"></i></div>
+        <h3>Morning Keynote &amp; Opening Panel</h3>
+        <p>Knight Auditorium · A fireside conversation with founders, investors, and operators building the future of sustainability and climate. Setting the vision for where impact entrepreneurship goes from here.</p>
+        <!-- REPLACE: add confirmed keynote speaker name and title when announced -->
+      </div>
+
+      <div class="program-card reveal reveal-delay-1">
+        <span class="program-number">02</span>
+        <div class="program-icon"><i class="fas fa-layer-group"></i></div>
+        <h3>Four "For Impact" Tracks</h3>
+        <p>Afternoon breakouts in Olin Hall — deep-dive sessions across the sectors where entrepreneurs are driving the most change.</p>
+        <ul class="tracks-list">
+          <li>Energy for Impact</li>
+          <li>VC for Impact</li>
+          <li>Food &amp; Agriculture for Impact</li>
+          <li>Fashion for Impact</li>
+        </ul>
+      </div>
+
+      <div class="program-card reveal reveal-delay-2">
+        <span class="program-number">03</span>
+        <div class="program-icon"><i class="fas fa-rocket"></i></div>
+        <h3>BSEC Sustainability &amp; Impact Venture Showcase</h3>
+        <p>Spotlighting the next generation of climate solutions from Babson student and alumni founders. Meet the entrepreneurs building what's next — before the world does.</p>
+      </div>
+
+      <div class="program-card reveal reveal-delay-3">
+        <span class="program-number">04</span>
+        <div class="program-icon"><i class="fas fa-award"></i></div>
+        <h3>Entrepreneur for Impact Award</h3>
+        <p>An annual award recognizing entrepreneurs driving sustainable and equitable climate impact.</p>
+        <span class="award-badge"><i class="fas fa-star"></i> 2026 Honoree · To Be Announced</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SPEAKERS ═══ -->
+<section id="speakers">
+  <div class="container">
+    <span class="tag reveal">Speakers &amp; Panelists</span>
+    <h2 class="reveal reveal-delay-1">Meet the Speakers</h2>
+    <div class="speakers-notice reveal reveal-delay-2">
+      <i class="fas fa-clock"></i>
+      Keynote and panelists announced on a rolling basis — check back soon.
+    </div>
+    <div class="speakers-grid">
+      <!-- REPLACE: replace each speaker-card with real speaker data -->
+      <!-- To add a headshot: set style="background-image:url('path/to/photo.jpg')" on .speaker-avatar -->
+      <div class="speaker-card reveal">
+        <div class="speaker-avatar">?</div>
+        <div class="speaker-name">Keynote Speaker</div>
+        <div class="speaker-role">Title · Announcement Coming</div>
+        <div class="speaker-org">TBD</div>
+      </div>
+      <div class="speaker-card reveal reveal-delay-1">
+        <div class="speaker-avatar">?</div>
+        <div class="speaker-name">Panelist</div>
+        <div class="speaker-role">Energy for Impact</div>
+        <div class="speaker-org">TBD</div>
+      </div>
+      <div class="speaker-card reveal reveal-delay-2">
+        <div class="speaker-avatar">?</div>
+        <div class="speaker-name">Panelist</div>
+        <div class="speaker-role">VC for Impact</div>
+        <div class="speaker-org">TBD</div>
+      </div>
+      <div class="speaker-card reveal reveal-delay-3">
+        <div class="speaker-avatar">?</div>
+        <div class="speaker-name">Panelist</div>
+        <div class="speaker-role">Food &amp; Agriculture for Impact</div>
+        <div class="speaker-org">TBD</div>
+      </div>
+      <div class="speaker-card reveal">
+        <div class="speaker-avatar">?</div>
+        <div class="speaker-name">Panelist</div>
+        <div class="speaker-role">Fashion for Impact</div>
+        <div class="speaker-org">TBD</div>
+      </div>
+      <div class="speaker-card reveal reveal-delay-1">
+        <div class="speaker-avatar">JC</div>
+        <div class="speaker-name">John Chaimanis</div>
+        <div class="speaker-role">Founder, BSEC</div>
+        <div class="speaker-org">Kendall Sustainable Infrastructure</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ AGENDA ═══ -->
+<section id="agenda">
+  <div class="container">
+    <span class="tag reveal">Schedule</span>
+    <h2 class="reveal reveal-delay-1">Conference Agenda</h2>
+    <div class="agenda-note reveal reveal-delay-2">
+      <i class="fas fa-calendar-check"></i>
+      Full agenda and speaker lineup releasing March 2026
+    </div>
+    <!-- REPLACE: update times, session titles, and speaker names when finalized -->
+    <div class="agenda-timeline">
+      <div class="agenda-item reveal">
+        <div class="agenda-time">8:00 AM</div>
+        <div class="agenda-node"></div>
+        <div class="agenda-content">
+          <h4>Registration &amp; Networking Breakfast</h4>
+          <p>Knight Auditorium · Doors open, coffee and breakfast served</p>
+        </div>
+      </div>
+      <div class="agenda-item reveal">
+        <div class="agenda-time">9:00 AM</div>
+        <div class="agenda-node major"></div>
+        <div class="agenda-content">
+          <h4>Welcome Remarks</h4>
+          <p>Ryan Lee &amp; Rashmi Tripathi, BSEC Co-Presidents, MBA '27</p>
+        </div>
+      </div>
+      <div class="agenda-item reveal">
+        <div class="agenda-time">9:30 AM</div>
+        <div class="agenda-node major"></div>
+        <div class="agenda-content">
+          <h4>Opening Keynote</h4>
+          <p>Speaker to be announced · Knight Auditorium</p>
+        </div>
+      </div>
+      <div class="agenda-item reveal">
+        <div class="agenda-time">10:30 AM</div>
+        <div class="agenda-node major"></div>
+        <div class="agenda-content">
+          <h4>Morning Panel: Entrepreneurs for Impact</h4>
+          <p>A cross-sector conversation with founders, investors, and operators on the front lines of sustainability</p>
+        </div>
+      </div>
+      <div class="agenda-item reveal">
+        <div class="agenda-time">12:00 PM</div>
+        <div class="agenda-node"></div>
+        <div class="agenda-content">
+          <h4>Lunch &amp; Networking</h4>
+          <p>Knight Auditorium foyer · Structured and open networking</p>
+        </div>
+      </div>
+      <div class="agenda-item reveal">
+        <div class="agenda-time">1:30 PM</div>
+        <div class="agenda-node major"></div>
+        <div class="agenda-content">
+          <h4>Afternoon Breakout Tracks</h4>
+          <p>Olin Hall (Malloy rooms) · Four concurrent sessions</p>
+          <div class="agenda-tracks">
+            <span class="agenda-track-pill">Energy for Impact</span>
+            <span class="agenda-track-pill">VC for Impact</span>
+            <span class="agenda-track-pill">Food &amp; Ag for Impact</span>
+            <span class="agenda-track-pill">Fashion for Impact</span>
+          </div>
+        </div>
+      </div>
+      <div class="agenda-item reveal">
+        <div class="agenda-time">4:00 PM</div>
+        <div class="agenda-node major"></div>
+        <div class="agenda-content">
+          <h4>BSEC Sustainability &amp; Impact Venture Showcase</h4>
+          <p>Student and alumni founders present next-generation climate solutions</p>
+        </div>
+      </div>
+      <div class="agenda-item reveal">
+        <div class="agenda-time">5:00 PM</div>
+        <div class="agenda-node major"></div>
+        <div class="agenda-content">
+          <h4>Entrepreneur for Impact Award Ceremony</h4>
+          <p>Celebrating entrepreneurs creating lasting sustainable impact</p>
+        </div>
+      </div>
+      <div class="agenda-item reveal">
+        <div class="agenda-time">5:30 PM</div>
+        <div class="agenda-node"></div>
+        <div class="agenda-content">
+          <h4>Closing Reception &amp; Community Networking</h4>
+          <p>Celebrate 20 years with the community that built BSEC</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SPONSORS ═══ -->
+<section id="sponsors">
+  <div class="container">
+    <span class="tag reveal">Partners &amp; Sponsors</span>
+    <h2 class="reveal reveal-delay-1">Our Sponsors Make This Possible</h2>
+    <p class="sponsors-sub reveal reveal-delay-2">BSEC has spent 20 years building bridges between students, founders, and the organizations driving sustainability forward. Your sponsorship puts your brand at the center of that community.</p>
+
+    <div class="sponsor-tiers">
+
+      <!-- REPLACE: move Kendall to appropriate tier once confirmed; add logo image -->
+      <div class="sponsor-tier reveal">
+        <div class="tier-header">
+          <span class="tier-name">Presenting</span>
+          <div class="tier-line"></div>
+        </div>
+        <div class="tier-logos">
+          <div class="sponsor-logo-box placeholder">Presenting Sponsor · TBD</div>
+        </div>
+      </div>
+
+      <div class="sponsor-tier reveal">
+        <div class="tier-header">
+          <span class="tier-name">Gold</span>
+          <div class="tier-line"></div>
+        </div>
+        <div class="tier-logos">
+          <div class="sponsor-logo-box placeholder">Gold Sponsor · TBD</div>
+        </div>
+      </div>
+
+      <div class="sponsor-tier reveal">
+        <div class="tier-header">
+          <span class="tier-name">Silver</span>
+          <div class="tier-line"></div>
+        </div>
+        <div class="tier-logos">
+          <div class="sponsor-logo-box placeholder">Silver Sponsor · TBD</div>
+        </div>
+      </div>
+
+      <div class="sponsor-tier reveal">
+        <div class="tier-header">
+          <span class="tier-name">Bronze</span>
+          <div class="tier-line"></div>
+        </div>
+        <div class="tier-logos">
+          <!-- REPLACE: add Kendall Sustainable Infrastructure logo image when available -->
+          <div class="sponsor-logo-box">Kendall Sustainable Infrastructure</div>
+        </div>
+      </div>
+
+      <div class="sponsor-tier reveal">
+        <div class="tier-header">
+          <span class="tier-name">In-Kind</span>
+          <div class="tier-line"></div>
+        </div>
+        <div class="tier-logos">
+          <div class="sponsor-logo-box placeholder">In-Kind Partner · TBD</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sponsor-cta-box reveal">
+      <div>
+        <h3>Join our sponsor community</h3>
+        <p>Reach 150–200 sustainability-focused students, alumni, founders, and investors. Limited sponsorship packages available — contact us to learn more.</p>
+      </div>
+      <div class="sponsor-cta-actions">
+        <!-- REPLACE: update href to actual sponsor deck PDF link when available -->
+        <a href="mailto:gradsustainability@babson.edu?subject=BSEC 2026 Sponsorship Inquiry" class="btn-white">
+          <i class="fas fa-envelope"></i> Email Us
+        </a>
+        <a href="mailto:gradsustainability@babson.edu?subject=BSEC 2026 Sponsor Deck Request" class="btn-ghost-white">
+          <i class="fas fa-file-pdf"></i> Request Sponsor Deck
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TICKETS BANNER ═══ -->
+<section id="tickets">
+  <div class="tickets-inner">
+    <span class="tag" style="color:var(--gold-lt);">Early Bird Tickets</span>
+    <h2 class="reveal">Early Bird Tickets<br><em>Now Available</em></h2>
+    <div class="ticket-prices reveal reveal-delay-1">
+      <div class="ticket-price-item">
+        <div class="ticket-price-amount">$25</div>
+        <div class="ticket-price-label">Babson Students</div>
+      </div>
+      <div class="ticket-price-item">
+        <div class="ticket-price-amount">$40</div>
+        <div class="ticket-price-label">Community</div>
+      </div>
+    </div>
+    <!-- REPLACE: update urgency copy and deadline when early bird window closes -->
+    <p class="tickets-copy reveal reveal-delay-2">"Whether you attended our first conference or are joining for the first time — we're building something special together."</p>
+    <a href="https://cglink.me/22L/r375910" target="_blank" class="btn btn-gold reveal reveal-delay-3" style="font-size:0.92rem; padding:1.1rem 2.8rem;">
+      <i class="fas fa-ticket"></i> Secure Your Spot
+    </a>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>BSEC Conference 2026</h3>
+        <p style="color:var(--gold-lt); font-family:var(--serif); font-style:italic; font-size:1rem; margin-top:0.3rem;">Entrepreneurs for Impact</p>
+        <p>20th Annual Babson Sustainability &amp; Energy Conference<br>Babson College · Wellesley, MA<br>Friday, April 24, 2026</p>
+        <a href="mailto:gradsustainability@babson.edu">
+          <i class="fas fa-envelope"></i> gradsustainability@babson.edu
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Previous Conferences</h4>
+        <ul>
+          <li><a href="https://www.bseclub.org/bsec-annual-conference-2025" target="_blank">BSEC 2025</a></li>
+          <li><a href="https://www.bseclub.org/bsec-annual-conference-2024" target="_blank">BSEC 2024</a></li>
+          <li><a href="https://www.bseclub.org/forum-overview-speakers-2023" target="_blank">BSEC 2023</a></li>
+          <li><a href="https://www.bseclub.org/babson-sustainability-forum-2022" target="_blank">BSEC 2022</a></li>
+          <li><a href="https://www.bseclub.org/babson-sustainability-forum-2021" target="_blank">BSEC 2021</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About the Conference</a></li>
+          <li><a href="#program">Program</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#sponsors">Sponsor the Conference</a></li>
+          <li><a href="https://cglink.me/22L/r375910" target="_blank">Buy Tickets</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Babson Sustainability &amp; Energy Club · All rights reserved</p>
+      <p>Hosted by Ryan Lee &amp; Rashmi Tripathi, BSEC Co-Presidents, MBA '27</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ JAVASCRIPT ═══ -->
+<script>
+// ── Nav scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('solid', window.scrollY > 60);
+});
+
+// ── Mobile menu
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+  const spans = hamburger.querySelectorAll('span');
+  const isOpen = navLinks.classList.contains('open');
+  spans[0].style.transform = isOpen ? 'rotate(45deg) translate(5px, 5px)' : '';
+  spans[1].style.opacity = isOpen ? '0' : '';
+  spans[2].style.transform = isOpen ? 'rotate(-45deg) translate(5px, -5px)' : '';
+});
+navLinks.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => navLinks.classList.remove('open'));
+});
+
+// ── Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ── Hero canvas — organic particle mesh
+(function() {
+  const canvas = document.getElementById('hero-canvas');
+  const ctx = canvas.getContext('2d');
+  let W, H, nodes = [], RAF;
+  const N = 55, CONNECT = 150, SPEED = 0.18;
+
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = canvas.parentElement.offsetHeight || window.innerHeight;
+  }
+
+  function init() {
+    nodes = [];
+    for (let i = 0; i < N; i++) {
+      nodes.push({
+        x: Math.random() * W,
+        y: Math.random() * H,
+        vx: (Math.random() - 0.5) * SPEED,
+        vy: (Math.random() - 0.5) * SPEED,
+        r: Math.random() * 2 + 1
+      });
+    }
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    nodes.forEach(n => {
+      n.x += n.vx; n.y += n.vy;
+      if (n.x < 0 || n.x > W) n.vx *= -1;
+      if (n.y < 0 || n.y > H) n.vy *= -1;
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(184,210,140,0.6)';
+      ctx.fill();
+    });
+    for (let i = 0; i < N; i++) {
+      for (let j = i + 1; j < N; j++) {
+        const dx = nodes[i].x - nodes[j].x;
+        const dy = nodes[i].y - nodes[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < CONNECT) {
+          ctx.beginPath();
+          ctx.moveTo(nodes[i].x, nodes[i].y);
+          ctx.lineTo(nodes[j].x, nodes[j].y);
+          ctx.strokeStyle = `rgba(100,190,120,${(1 - dist / CONNECT) * 0.3})`;
+          ctx.lineWidth = 0.8;
+          ctx.stroke();
+        }
+      }
+    }
+    RAF = requestAnimationFrame(draw);
+  }
+
+  resize(); init(); draw();
+  window.addEventListener('resize', () => { resize(); init(); });
+})();
+</script>
+</body>
+</html>
