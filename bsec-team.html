@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet the Team — BSEC Conference 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* RESET & ROOT */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --g-deep:   #050608;
+      --g-mid:    #10141E;
+      --g-light:  #25C7B8;
+      --g-pale:   #0F2528;
+      --cream:    #F9FAFB;
+      --cream-dk: #E5E7EB;
+      --gold:     #25C7B8;
+      --gold-lt:  #5FF7E8;
+      --gold-pale:#D1FAF5;
+      --white:    #FFFFFF;
+      --ink:      #020617;
+      --ink-mid:  #4B5563;
+      --ink-soft: #6B7280;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans:  'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --display: 'Bebas Neue', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --accent-cyan: #43F1E8;
+      --accent-red:  #FF4C65;
+      --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--sans);
+      background: var(--g-deep);
+      color: var(--cream);
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 2rem; }
+
+    .tag {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--g-light);
+      margin-bottom: 0.9rem;
+    }
+
+    /* NAV (match conference page) */
+    #nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      padding: 1.4rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.4s, padding 0.4s, box-shadow 0.4s;
+    }
+    #nav.solid {
+      background: rgba(5, 6, 8, 0.96);
+      backdrop-filter: blur(12px);
+      padding: 0.9rem 2rem;
+      box-shadow: 0 1px 30px rgba(0,0,0,0.25);
+    }
+    .nav-brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+    .nav-brand-top {
+      font-family: var(--display);
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: var(--white);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    .nav-brand-sub {
+      font-size: 0.65rem;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold-lt);
+      margin-top: 0.15rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold-lt); }
+    .nav-cta {
+      background: var(--gold) !important;
+      color: var(--white) !important;
+      padding: 0.55rem 1.3rem !important;
+      border-radius: 1px;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--gold-lt) !important; }
+    .nav-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.25rem;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--white);
+      margin: 5px 0;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    /* PAGE HERO */
+    #team-hero {
+      background: radial-gradient(circle at top, #0f172a 0, #020617 45%, #020617 100%);
+      color: var(--white);
+      padding: 5.5rem 0 4rem;
+    }
+    .team-hero-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .team-hero-overline {
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-lt);
+      margin-bottom: 0.8rem;
+    }
+    .team-hero-title {
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 4vw, 3.4rem);
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 0.9rem;
+    }
+    .team-hero-title em {
+      font-style: italic;
+      color: var(--gold-lt);
+    }
+    .team-hero-sub {
+      font-size: 0.98rem;
+      color: rgba(249,250,251,0.75);
+      line-height: 1.7;
+      margin-bottom: 1.8rem;
+    }
+    .team-hero-meta {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(249,250,251,0.6);
+    }
+
+    /* TEAM GRID */
+    #team-gallery {
+      padding: 3.5rem 0 6rem;
+      background: var(--cream);
+    }
+    #team-gallery h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.2vw, 2.6rem);
+      font-weight: 300;
+      color: var(--g-deep);
+      margin-bottom: 0.75rem;
+    }
+    .team-sub {
+      font-size: 0.95rem;
+      color: var(--ink-mid);
+      max-width: 560px;
+      line-height: 1.75;
+      margin-bottom: 3rem;
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .team-card {
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 14px 30px rgba(15,23,42,0.12);
+      display: flex;
+      flex-direction: column;
+    }
+    .team-photo {
+      position: relative;
+      padding-top: 85%;
+      background-color: #e5e7eb;
+      background-size: cover;
+      background-position: center;
+    }
+    .team-photo::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.05), rgba(0,0,0,0.4));
+      opacity: 0;
+      transition: opacity 0.25s var(--ease);
+    }
+    .team-card:hover .team-photo::after {
+      opacity: 1;
+    }
+    .team-body {
+      padding: 1.1rem 1.2rem 1.2rem;
+    }
+    .team-name {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--g-deep);
+      margin-bottom: 0.2rem;
+    }
+    .team-role {
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      margin-bottom: 0.35rem;
+    }
+    .team-year {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--g-light);
+      margin-bottom: 0.6rem;
+    }
+    .team-links {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.3rem;
+    }
+    .team-links a {
+      font-size: 0.8rem;
+      color: #0A66C2;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    .team-links a span {
+      font-weight: 500;
+    }
+    .team-bio {
+      font-size: 0.84rem;
+      line-height: 1.7;
+      color: var(--ink-soft);
+      margin-bottom: 0.6rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #050608;
+      padding: 3rem 0 2rem;
+      color: rgba(249,250,251,0.6);
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
+    }
+    .footer-inner a {
+      color: var(--gold-lt);
+    }
+    .footer-compliance {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      opacity: 0.85;
+    }
+    .footer-compliance img {
+      height: 20px;
+      width: auto;
+      display: block;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .container { padding: 0 1.5rem; }
+    }
+    @media (max-width: 640px) {
+      #nav { padding: 1rem 1.2rem; }
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        position: fixed;
+        inset: 0;
+        top: 60px;
+        background: rgba(5,6,8,0.98);
+        padding: 2rem;
+        align-items: flex-start;
+      }
+      .nav-links.open a { font-size: 1rem; }
+      .nav-hamburger { display: block; }
+      .footer-compliance { margin-top: 0.75rem; justify-content: center; }
+      .footer-compliance img { height: 18px; }
+    }
+    @media (max-width: 480px) {
+      #nav { padding-inline: 0.9rem; }
+      .nav-brand-top {
+        font-size: 1rem;
+        letter-spacing: 0.12em;
+      }
+      .nav-brand-sub {
+        font-size: 0.6rem;
+        letter-spacing: 0.12em;
+      }
+      #team-hero {
+        padding: 4.5rem 0 3.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="2026 BSEC Conference Website.html#hero" class="nav-brand">
+      <span class="nav-brand-top">BSEC Conference 2026</span>
+      <span class="nav-brand-sub">Entrepreneurs for Impact</span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="2026 BSEC Conference Website.html#about">About</a></li>
+      <li><a href="2026 BSEC Conference Website.html#program">Program</a></li>
+      <li><a href="2026 BSEC Conference Website.html#speakers">Speakers</a></li>
+      <li><a href="2026 BSEC Conference Website.html#agenda">Agenda</a></li>
+      <li><a href="2026 BSEC Conference Website.html#sponsors">Sponsors</a></li>
+      <li><a href="https://cglink.me/22L/r375910" target="_blank" class="nav-cta">Get Tickets</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section id="team-hero">
+    <div class="container">
+      <div class="team-hero-inner">
+        <div class="team-hero-overline">Babson Sustainability &amp; Energy Club</div>
+        <h1 class="team-hero-title">Meet the <em>Entrepreneurs for Impact</em> Team</h1>
+        <p class="team-hero-sub">
+          The students leading the 20th Annual BSEC Conference and building the community
+          around entrepreneurship, sustainability, and energy at Babson.
+        </p>
+        <div class="team-hero-meta">
+          2025–2026 Leadership Team · Babson College · Wellesley, MA
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM GALLERY -->
+  <section id="team-gallery">
+    <div class="container">
+      <span class="tag">Leadership Team</span>
+      <h2>Leadership &amp; Organizing Team</h2>
+      <p class="team-sub">
+        The officers and organizers who responded to our Spring 2026 leadership onboarding form.
+        Each brings a different perspective to sustainability, energy, and impact at Babson.
+      </p>
+
+      <div class="team-grid">
+        <!-- Officers from Spring 2026 leadership onboarding form -->
+        <article class="team-card">
+          <div class="team-photo" style="background-image:url('https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/091025-Siddhartha%20Suresh2_Siddhartha%20S.JPG');"></div>
+          <div class="team-body">
+            <h3 class="team-name">Siddhartha Suresh</h3>
+            <p class="team-role">Leadership Team</p>
+            <p class="team-year">2025–2026 Leadership Team</p>
+            <p class="team-bio">
+              Siddhartha Suresh is a sustainability and energy professional with experience in infrastructure development, and regulatory compliance. He has led cross-functional initiatives across real estate development, global product certification, and emerging sectors including EV charging and drone technologies. With a foundation in electrical engineering and a focus on strategy and analytics, Siddhartha has worked at the intersection of technology, operations, and sustainability. He is currently pursuing an MBA at Babson College and is committed to enabling scalable, compliant, and impact-driven solutions that support the global energy transition.
+            </p>
+            <div class="team-links">
+              <a href="https://www.linkedin.com/in/ssiddhartha" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <div class="team-photo" style="background-image:url('https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/DR5A9270-Edit_Liantsoa%20Ratsimbazaf.jpg');"></div>
+          <div class="team-body">
+            <h3 class="team-name">Liantsoa Ratsimbazafy</h3>
+            <p class="team-role">Director of Partnership &amp; Sponsorship</p>
+            <p class="team-year">2025–2026 Leadership Team</p>
+            <p class="team-bio">
+              Liantsoa is a Babson MSEL ’26 candidate. Before her studies at Babson, Liantsoa developed an extensive professional background in managing strategic partnerships and corporate social responsibility. A former UN Generation Equality and COP advocate, she leverages her advocacy expertise to drive impact for the Babson Sustainability and Energy Club by serving as the Director of Partnership and Sponsorship. She enjoys adventure travel and works on founding Aviaty, a destination management company aiming to promote sustainable tourism in Madagascar.
+            </p>
+            <div class="team-links">
+              <a href="https://www.linkedin.com/in/liantsoa-ratsimbazafy-6560051b4/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <div class="team-photo" style="background-image:url('https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/IMG_5614_Dilo%20Junior.jpeg');"></div>
+          <div class="team-body">
+            <h3 class="team-name">Dilo Junior</h3>
+            <p class="team-role">Leadership Team</p>
+            <p class="team-year">2025–2026 Leadership Team</p>
+            <p class="team-bio">
+              Dilo Junior is an MBA candidate at Babson College and a climate-tech ecosystem builder with over ten years of experience supporting early-stage startups at the intersection of technology, sustainability, and venture capital. He is the co-founder of HARDS, Brazil’s first hard-tech accelerator and pre-seed fund, where he helped invest in and scale deep-tech companies from lab to market. Passionate about climate resilience and impact investing, Dilo focuses on building founder-first platforms that enable innovation to solve meaningful global challenges.
+            </p>
+            <div class="team-links">
+              <a href="https://www.linkedin.com/in/odilojunior" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <div class="team-photo" style="background-image:url('https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/Photo%20white%20background_Divya%20Atre.jpg');"></div>
+          <div class="team-body">
+            <h3 class="team-name">Divya Atre</h3>
+            <p class="team-role">Leadership Team</p>
+            <p class="team-year">2025–2026 Leadership Team</p>
+            <p class="team-bio">
+              Divya is a Master of Science in Finance candidate at Babson College (Class of 2026) and a Chartered Accountant from India with over three years of experience in assurance at EY. Naturally inclined toward numbers and analysis, she enjoys transforming complex data into clear financial insights and decisions. At Babson, Divya is involved in the Finance and Sustainability Clubs, leading events and pursuing leadership roles. She is deeply interested in using finance to support sustainable business models and long-term value creation. Her interests include corporate finance, FP&amp;A, valuation, fitness, travel, and mentoring peers.
+            </p>
+            <div class="team-links">
+              <a href="https://www.linkedin.com/in/divya-atre" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <div class="team-photo" style="background-image:url('https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/IMG_7419_Yahna%20Mehta.jpeg');"></div>
+          <div class="team-body">
+            <h3 class="team-name">Yahna Mehta</h3>
+            <p class="team-role">Leadership Team</p>
+            <p class="team-year">2025–2026 Leadership Team</p>
+            <p class="team-bio">
+              Yahna is a Master of Science in Management in Entrepreneurial Leadership (MSEL) student at Babson College, set to graduate in May 2026. Originally from Mumbai, India, Yahna brings a global perspective shaped by travels to nearly 40 countries and a passion for connecting with new people and cultures. An accomplished athlete, Yahna represented India in throwball, proudly serving as the youngest captain to lead her team to tournament victory in 2019. Beyond sports, Yahna thrives on music and building meaningful friendships. Professionally, Yahna gained hands-on experience in sports marketing and sponsorship at Meraki Sport and Entertainment and in luxury real estate marketing at Nest Seekers International in New York.
+            </p>
+            <div class="team-links">
+              <a href="https://www.linkedin.com/in/yahnamehta" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <div class="team-photo" style="background-image:url('https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/091025-Dabin%20Lee_e1_Dabin%20Lee.jpg');"></div>
+          <div class="team-body">
+            <h3 class="team-name">Dabin Lee</h3>
+            <p class="team-role">Leadership Team</p>
+            <p class="team-year">2025–2026 Leadership Team</p>
+            <p class="team-bio">
+              Dabin is a full-time MBA student at Babson College’s F.W. Olin Graduate School of Business, with an expected commencement date in May 2026. He is concentrating in Business Analytics and Machine Learning (STEM) and Finance, and is preparing for roles in the energy and infrastructure sector. Prior to Babson, Dabin worked across energy project development, consulting, and supply chain roles, including supporting offshore wind projects at Equinor and providing market and commercial analysis to energy and infrastructure clients at Nathan Research Group. He has additional experience in international logistics and end-to-end supply chain operations in both corporate and entrepreneurial settings.
+            </p>
+            <div class="team-links">
+              <a href="https://www.linkedin.com/in/dabinlee7" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <div class="team-photo" style="background-image:url('https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/IMG_0992_Ayako%20Osawa.png');"></div>
+          <div class="team-body">
+            <h3 class="team-name">Ayako Osawa</h3>
+            <p class="team-role">Director of Impact Investing &amp; ESG</p>
+            <p class="team-year">2025–2026 Leadership Team</p>
+            <p class="team-bio">
+              Ayako Osawa is a full-time MBA candidate at Babson College, Class of 2027, and Director of Impact Investing &amp; ESG for the Babson Sustainability &amp; Energy Club. Before Babson, she worked on social impact projects in areas such as culture, education, and social welfare, supporting fundraising, communication, and platform development. At BSEC, she works on strengthening ESG learning and connecting students with investors and practitioners from different sectors. She is passionate about making ESG practical and turning ideas into real action.
+            </p>
+            <div class="team-links">
+              <a href="https://www.linkedin.com/in/ayako-osawa" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <div class="team-photo" style="background-image:url('https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/image_Shubhankar%20Mittal.jpg');"></div>
+          <div class="team-body">
+            <h3 class="team-name">Shubhankar Mittal</h3>
+            <p class="team-role">Leadership Team</p>
+            <p class="team-year">2025–2026 Leadership Team</p>
+            <p class="team-bio">
+              Shubhankar is a graduate student in the MSEL program at Babson College with a strong focus on leadership, entrepreneurship, and strategic execution. He has experience coordinating team projects, organizing events, and managing operations in fast-paced academic and startup environments, ensuring alignment with organizational goals and timelines. He brings a results-oriented mindset, clear communication, and strong ownership to every responsibility. Shubhankar is committed to strengthening this club’s structure, member engagement, and campus presence through accountable management and thoughtful, data-informed decision-making.
+            </p>
+            <div class="team-links">
+              <a href="https://linkedin.com/in/shubhankar-mittal" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <div class="team-photo" style="background-image:url('https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/kP_Kairav%20Panchal.jpeg');"></div>
+          <div class="team-body">
+            <h3 class="team-name">Kairav Panchal</h3>
+            <p class="team-role">Leadership Team</p>
+            <p class="team-year">2025–2026 Leadership Team</p>
+            <p class="team-bio">
+              Kairav is a full-time MBA student at Babson College. He was previously working at a VC firm at the founders office. Prior to this he has also worked in strategy consulting and ESG consulting, doing carbon footprint analysis for pollution-intensive industries.
+            </p>
+            <div class="team-links">
+              <a href="https://www.linkedin.com/in/kairav-panchal" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <div class="team-photo" style="background-image:url('https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/TSUG2001%202_Maeno%20Fumie.JPG');"></div>
+          <div class="team-body">
+            <h3 class="team-name">Fumie Maeno</h3>
+            <p class="team-role">Leadership Team</p>
+            <p class="team-year">2025–2026 Leadership Team</p>
+            <p class="team-bio">
+              Fumie is a full-time MBA student at Babson College and holds a Bachelor of Law from Keio University. Before Babson, she built over 18 years of experience in asset management at Nikko Asset Management, where she served as an investment analyst, investment service officer, and investment compliance officer. She covered 80+ equities, led cross-functional process redesigns, and supported product launches enabling international expansion. Beyond her professional career, she is committed to sustainability and community development, focused on food safety and primary industries, and co-founded Farm Gastronomy, a 40-member community.
+            </p>
+            <div class="team-links">
+              <a href="https://www.linkedin.com/in/fumie-maeno/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <div class="team-photo" style="background-image:url('https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/IMG_3053_Adekunbi%20Bello.jpeg');"></div>
+          <div class="team-body">
+            <h3 class="team-name">Adekunbi Bello</h3>
+            <p class="team-role">Leadership Team</p>
+            <p class="team-year">2025–2026 Leadership Team</p>
+            <p class="team-bio">
+              Adekunbi Bello is a Babson MBA student interested in sustainability, clean energy, and data-driven operations. She works at the intersection of analytics and impact, with a focus on building systems that help organizations reduce waste and improve efficiency. She likes to meet people and enjoys discovery learning.
+            </p>
+            <div class="team-links">
+              <a href="https://linkedin.com/in/adekunbi-bb" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <div class="team-photo" style="background-image:url('https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/091025-Ilia%20Borodin_Ilia%20Borodin.JPG');"></div>
+          <div class="team-body">
+            <h3 class="team-name">Ilia Borodin</h3>
+            <p class="team-role">Leadership Team</p>
+            <p class="team-year">2025–2026 Leadership Team</p>
+            <p class="team-bio">
+              Ilia is a full-time MBA candidate at Babson College with an expected graduation in 2027. He holds a Master of Science in Agriculture and has over a decade of hands-on experience in industrial greenhouse operations, automation, and agribusiness entrepreneurship. Prior to business school, Ilia co-founded and led a greenhouse infrastructure venture, executing large-scale projects across multiple regions and driving significant improvements in agricultural productivity through modern automation technologies. He previously worked with leading horticultural automation providers and managed commercial greenhouse operations at scale.
+            </p>
+            <div class="team-links">
+              <a href="https://www.linkedin.com/in/iborodin1" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <div class="team-photo" style="background-image:url('https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/ca6bca01-1b45-487c-ac64-c50a598fb90c_Manav%20Arora.jpeg');"></div>
+          <div class="team-body">
+            <h3 class="team-name">Manav Arora</h3>
+            <p class="team-role">Leadership Team</p>
+            <p class="team-year">2025–2026 Leadership Team</p>
+            <p class="team-bio">
+              Manav is an MBA candidate at Babson College with a background in operations, supply chain, and family business leadership. Before Babson, he worked for five years in the automotive manufacturing industry, gaining hands-on experience in strategy, process improvement, and sustainability-driven decision-making. He is passionate about building practical, scalable solutions that balance business growth with environmental responsibility and enjoys working at the intersection of entrepreneurship, analytics, and impact-driven innovation.
+            </p>
+            <div class="team-links">
+              <a href="https://www.linkedin.com/in/manavarora-" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <div class="team-photo" style="background-image:url('https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/Manish_Photo_Manish%20Kumar.png');"></div>
+          <div class="team-body">
+            <h3 class="team-name">Manish Kumar</h3>
+            <p class="team-role">Leadership Team</p>
+            <p class="team-year">2025–2026 Leadership Team</p>
+            <p class="team-bio">
+              Manish is an MBA student at Babson College with a background in civil engineering and experience in infrastructure and water resource projects. He is deeply interested in sustainability and clean energy, especially how data, systems thinking, and analytics can be used to solve real-world environmental and social challenges. Through his work at Babson and with the Sustainability &amp; Energy Club, he enjoys learning, collaborating, and building practical solutions that create long-term impact.
+            </p>
+            <div class="team-links">
+              <a href="https://www.linkedin.com/in/manish-kumar-989086176/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p>© 2026 Babson Sustainability &amp; Energy Club · BSEC Conference 2026</p>
+        <p>
+          <a href="2026 BSEC Conference Website.html">Back to conference page</a>
+        </p>
+      </div>
+      <div class="footer-compliance" aria-label="Babson compliance mark">
+        <img src="blob:https://imgur.com/f287dac2-e2b0-4f6a-8dce-7fa9340087f1" alt="Babson College, A Student-Led Event" loading="lazy" />
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Nav scroll – match main site behavior
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('solid', window.scrollY > 60);
+    });
+
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+        const spans = hamburger.querySelectorAll('span');
+        const isOpen = navLinks.classList.contains('open');
+        spans[0].style.transform = isOpen ? 'rotate(45deg) translate(5px, 5px)' : '';
+        spans[1].style.opacity = isOpen ? '0' : '';
+        spans[2].style.transform = isOpen ? 'rotate(-45deg) translate(5px, -5px)' : '';
+      });
+    }
+  </script>
+</body>
+</html>
+
