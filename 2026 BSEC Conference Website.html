@@ -662,11 +662,11 @@ a { color: inherit; text-decoration: none; }
 .agenda-timeline { position: relative; max-width: 760px; }
 .agenda-timeline::before {
   content: '';
-  position: absolute; top: 10px; bottom: 10px; left: 96px;
+  position: absolute; top: 0; bottom: 0; left: 96px;
   width: 1px; background: var(--cream-dk);
 }
 .agenda-item {
-  display: flex; align-items: flex-start; gap: 2rem;
+  display: flex; align-items: center; gap: 2rem;
   padding: 1.4rem 0;
   border-bottom: 1px solid var(--cream-dk);
   position: relative;
@@ -679,7 +679,6 @@ a { color: inherit; text-decoration: none; }
   font-weight: 600;
   color: var(--ink-soft);
   letter-spacing: 0.04em;
-  padding-top: 0.15rem;
 }
 .agenda-node {
   flex-shrink: 0;
@@ -687,10 +686,11 @@ a { color: inherit; text-decoration: none; }
   width: 12px; height: 12px;
   border-radius: 50%;
   background: var(--gold);
-  margin-top: 0.22rem;
 }
 .agenda-node.major { background: var(--g-deep); box-shadow: 0 0 0 3px var(--gold-pale); }
-.agenda-content { flex: 1; }
+.agenda-content {
+  flex: 1;
+}
 .agenda-content h4 {
   font-family: var(--serif);
   font-size: 1.15rem;
@@ -749,6 +749,46 @@ a { color: inherit; text-decoration: none; }
   padding: 0.25rem 0.7rem;
   border-radius: 100px;
   border: 1px solid rgba(37,199,184,0.4);
+}
+.agenda-track-pill.invite-only {
+  color: var(--ink-mid);
+  background: rgba(37,199,184,0.08);
+  border-color: rgba(37,199,184,0.25);
+}
+.pre-event-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 0.75rem;
+  padding-top: 0.5rem;
+}
+.agenda-item.vip-dinner {
+  background: rgba(249,250,251,0.6);
+  border: none;
+  border-radius: 0 6px 6px 0;
+  padding: 1.5rem 1.5rem 1.5rem 1.25rem;
+  margin-bottom: 1rem;
+}
+.agenda-item.vip-dinner .agenda-content p { margin-bottom: 0.5rem; }
+.agenda-item.vip-dinner .agenda-content p:last-of-type { margin-bottom: 0; }
+.agenda-venue {
+  font-size: 0.8rem;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink-mid);
+  margin-bottom: 0.6rem;
+}
+.day-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--cream-dk);
 }
 
 /* ─────────────────────────────────────────
@@ -1049,7 +1089,7 @@ footer {
   opacity: 0.85;
 }
 .footer-compliance img {
-  height: 20px;
+  height: 50px;
   width: auto;
   display: block;
 }
@@ -1134,7 +1174,7 @@ footer {
   .agenda-timeline::before { left: 84px; }
   .agenda-time { width: 72px; font-size: 0.72rem; }
   .footer-compliance { margin-top: 0.75rem; justify-content: center; }
-  .footer-compliance img { height: 18px; }
+  .footer-compliance img { height: 24px; }
 }
 @media (max-width: 480px) {
   #nav {
@@ -1182,16 +1222,16 @@ footer {
 
 <!-- ═══ NAV ═══ -->
 <nav id="nav">
-  <a href="#hero" class="nav-brand">
+  <a href="https://www.bseclub.org/" class="nav-brand">
     <span class="nav-brand-top">BSEC Conference 2026</span>
     <span class="nav-brand-sub">Entrepreneurs for Impact</span>
   </a>
   <ul class="nav-links" id="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#program">Program</a></li>
-    <li><a href="#speakers">Speakers</a></li>
-    <li><a href="#agenda">Agenda</a></li>
-    <li><a href="#sponsors">Sponsors</a></li>
+    <li><a href="https://www.bseclub.org/#about">About</a></li>
+    <li><a href="https://www.bseclub.org/#program">Program</a></li>
+    <li><a href="https://www.bseclub.org/#speakers">Speakers</a></li>
+    <li><a href="https://www.bseclub.org/#agenda">Agenda</a></li>
+    <li><a href="https://www.bseclub.org/#sponsors">Sponsors</a></li>
     <li><a href="https://cglink.me/22L/r375910" target="_blank" class="nav-cta">Get Tickets</a></li>
   </ul>
   <button class="nav-hamburger" id="hamburger" aria-label="Menu">
@@ -1358,39 +1398,8 @@ footer {
       Keynote and panelists announced on a rolling basis — check back soon.
     </div>
     <div class="speakers-grid">
-      <!-- REPLACE: replace each speaker-card with real speaker data -->
-      <!-- To add a headshot: set style="background-image:url('path/to/photo.jpg')" on .speaker-avatar -->
+      <!-- Ordered by appearance in the agenda -->
       <div class="speaker-card reveal">
-        <div class="speaker-avatar">?</div>
-        <div class="speaker-name">Keynote Speaker</div>
-        <div class="speaker-role">Title · Announcement Coming</div>
-        <div class="speaker-org">TBD</div>
-      </div>
-      <div class="speaker-card reveal reveal-delay-1">
-        <div class="speaker-avatar">?</div>
-        <div class="speaker-name">Panelist</div>
-        <div class="speaker-role">Energy for Impact</div>
-        <div class="speaker-org">TBD</div>
-      </div>
-      <div class="speaker-card reveal reveal-delay-2">
-        <div class="speaker-avatar">?</div>
-        <div class="speaker-name">Panelist</div>
-        <div class="speaker-role">VC for Impact</div>
-        <div class="speaker-org">TBD</div>
-      </div>
-      <div class="speaker-card reveal reveal-delay-3">
-        <div class="speaker-avatar">?</div>
-        <div class="speaker-name">Panelist</div>
-        <div class="speaker-role">Food &amp; Agriculture for Impact</div>
-        <div class="speaker-org">TBD</div>
-      </div>
-      <div class="speaker-card reveal">
-        <div class="speaker-avatar">?</div>
-        <div class="speaker-name">Panelist</div>
-        <div class="speaker-role">Fashion for Impact</div>
-        <div class="speaker-org">TBD</div>
-      </div>
-      <div class="speaker-card reveal reveal-delay-1">
         <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/ejywEAz.jpeg');"></div>
         <div class="speaker-name">Stephen Spinelli Jr.</div>
         <div class="speaker-role">President, Babson College</div>
@@ -1402,11 +1411,12 @@ footer {
           </a>
         </div>
       </div>
+
       <div class="speaker-card reveal reveal-delay-1">
         <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/WxdMWCO.jpeg');"></div>
         <div class="speaker-name">Leila Lamoureux</div>
-        <div class="speaker-role">Director, Babson Greenworks</div>
-        <div class="speaker-org">Opening Speaker</div>
+        <div class="speaker-role">Director, Babson Greenworks &nbsp;&middot;&nbsp; Babson College</div>
+        <div class="speaker-org">Presenting: &ldquo;State of Sustainability &amp; Impact at Babson&rdquo;</div>
         <div class="speaker-links">
           <a href="https://www.linkedin.com/in/leila-scott-lamoureux-761a0a8" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-linkedin"></i>
@@ -1414,17 +1424,112 @@ footer {
           </a>
         </div>
       </div>
+
+      <div class="speaker-card reveal reveal-delay-1">
+        <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/8DIULnv.jpeg');"></div>
+        <div class="speaker-name">Mark Donohue</div>
+        <div class="speaker-role">Babson &rsquo;87 &nbsp;·&nbsp; Entrepreneur-in-Residence, 2008&ndash;2013</div>
+        <div class="speaker-org">Fireside Chat: Entrepreneurs for Impact</div>
+        <div class="speaker-links">
+          <a href="https://www.linkedin.com/in/markdonohue123/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+
       <div class="speaker-card reveal reveal-delay-1">
         <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/KDYewa8.jpeg');"></div>
         <div class="speaker-name">John Chaimanis</div>
-        <div class="speaker-role">Founder, BSEC</div>
-        <div class="speaker-org">Kendall Sustainable Infrastructure</div>
+        <div class="speaker-role">Founder, BSEC &nbsp;&middot;&nbsp; CEO, Kendall Sustainable Infrastructure</div>
+        <div class="speaker-org">Panel: BSEC Alumni Conversation</div>
         <div class="speaker-links">
           <a href="https://www.linkedin.com/in/johnchaimanis/" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-linkedin"></i>
             <span>LinkedIn</span>
           </a>
         </div>
+      </div>
+
+      <div class="speaker-card reveal">
+        <div class="speaker-avatar" style="background-image:url('https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/Nicole%20LaChapelle.png');"></div>
+        <div class="speaker-name">Nicole LaChapelle</div>
+        <div class="speaker-role">Commissioner, Massachusetts Department of Conservation and Recreation (DCR)</div>
+        <div class="speaker-org">
+          Keynote: Entrepreneurs for Impact &nbsp;&middot;&nbsp;
+          <a href="https://www.mass.gov/orgs/department-of-conservation-recreation" target="_blank" rel="noopener noreferrer">Massachusetts Department of Conservation and Recreation</a>
+        </div>
+        <div class="speaker-links">
+          <a href="https://www.linkedin.com/in/nicolelachapelle/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="speaker-card reveal reveal-delay-1">
+        <div class="speaker-avatar" style="background-image:url('https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/Shiv%20Bhakta.png');"></div>
+        <div class="speaker-name">Shiv Bhakta</div>
+        <div class="speaker-role">Founder &amp; CEO,
+          <a href="https://www.activesurfaces.xyz/" target="_blank" rel="noopener noreferrer">Active Surfaces</a>
+        </div>
+        <div class="speaker-org">Keynote &nbsp;&middot;&nbsp; Energy for Impact</div>
+        <div class="speaker-links">
+          <a href="https://www.linkedin.com/in/shivambhakta/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="speaker-card reveal reveal-delay-1">
+        <div class="speaker-avatar" style="background-image:url('https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/Jen%20Faigel.png');"></div>
+        <div class="speaker-name">Jen Faigel</div>
+        <div class="speaker-role">Co-Founder &amp; Executive Director,
+          <a href="https://commonwealthkitchen.org/" target="_blank" rel="noopener noreferrer">CommonWealth Kitchen</a>
+        </div>
+        <div class="speaker-org">Panelist &nbsp;&middot;&nbsp; Food &amp; Agriculture for Impact</div>
+        <div class="speaker-links">
+          <a href="https://www.linkedin.com/in/jenfaigel/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="speaker-card reveal reveal-delay-2">
+        <div class="speaker-avatar" style="background-image:url('https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/Eric%20Hudson.png');"></div>
+        <div class="speaker-name">Eric Hudson</div>
+        <div class="speaker-role">Founder &amp; CEO, Preserve</div>
+        <div class="speaker-org">Panelist &nbsp;&middot;&nbsp; Oceans for Impact</div>
+        <div class="speaker-links">
+          <a href="https://www.linkedin.com/in/eric-hudson-5a577a152/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Remaining placeholders for yet-to-be-announced panelists -->
+      <div class="speaker-card reveal reveal-delay-1">
+        <div class="speaker-avatar">?</div>
+        <div class="speaker-name">Panelist</div>
+        <div class="speaker-role">Energy for Impact</div>
+        <div class="speaker-org">TBD</div>
+      </div>
+
+      <div class="speaker-card reveal reveal-delay-2">
+        <div class="speaker-avatar">?</div>
+        <div class="speaker-name">Panelist</div>
+        <div class="speaker-role">VC for Impact</div>
+        <div class="speaker-org">TBD</div>
+      </div>
+
+      <div class="speaker-card reveal reveal-delay-3">
+        <div class="speaker-avatar">?</div>
+        <div class="speaker-name">Panelist</div>
+        <div class="speaker-role">Fashion for Impact</div>
+        <div class="speaker-org">TBD</div>
       </div>
     </div>
   </div>
@@ -1441,6 +1546,20 @@ footer {
     </div>
     <!-- REPLACE: update times, session titles, and speaker names when finalized -->
     <div class="agenda-timeline">
+      <div class="pre-event-label reveal">Evening Before &mdash; Thursday, April 23</div>
+      <div class="agenda-item vip-dinner reveal">
+        <div class="agenda-time">6:00 PM</div>
+        <div class="agenda-node"></div>
+        <div class="agenda-content">
+          <h4>20th Anniversary VIP Dinner</h4>
+          <p class="agenda-venue">St. Lawrence Room &nbsp;&middot;&nbsp; Executive Education Center, Babson College</p>
+          <p>An intimate dinner bringing together past BSEC co-presidents, keynote speakers, sponsors, and a select group of students for an evening of reconnection and reflection ahead of the conference. By invitation only.</p>
+          <div class="agenda-tracks">
+            <span class="agenda-track-pill invite-only">&#x2709; By Invitation Only</span>
+          </div>
+        </div>
+      </div>
+      <div class="day-label reveal">Friday, April 24 &mdash; Conference Day</div>
       <div class="agenda-item reveal">
         <div class="agenda-time">8:00 AM</div>
         <div class="agenda-node"></div>
@@ -1471,20 +1590,33 @@ footer {
         <div class="agenda-time">9:00 AM</div>
         <div class="agenda-node major"></div>
         <div class="agenda-content">
-          <h4>Welcome Remarks</h4>
-          <p>Ryan Lee &amp; Rashmi Tripathi, BSEC Co-Presidents, MBA &rsquo;27</p>
+          <h4>Welcome &amp; BSEC Conference Kickoff</h4>
+          <p>Opening welcome from BSEC Co-Presidents Ryan Lee and Rashmi Tripathi. Remarks from President Stephen Spinelli Jr., Babson College.</p>
         </div>
       </div>
       <div class="agenda-item reveal">
-        <div class="agenda-time">9:30 AM</div>
+        <div class="agenda-time">9:10 AM – 9:30 AM</div>
         <div class="agenda-node major"></div>
         <div class="agenda-content">
-          <h4>Opening Keynote</h4>
-          <p>Speaker to be announced · Knight Auditorium</p>
+          <h4>Opening: State of Sustainability &amp; Impact at Babson</h4>
+          <p>A look at where Babson stands today on its sustainability journey — from the wind turbine that arrived on campus in 2008 to the solar farm launching this spring, a new bee farm, a Miyawaki forest planting, and a campus-wide metering initiative. An inside look at what&rsquo;s been built, what&rsquo;s being announced, and what comes next.</p>
+          <div class="agenda-speaker">
+            <div class="agenda-speaker-photo" style="background-image:url('https://i.imgur.com/WxdMWCO.jpeg');" aria-hidden="true"></div>
+            <div class="agenda-speaker-info">
+              <div class="agenda-speaker-name">
+                <a href="https://www.linkedin.com/in/leila-scott-lamoureux-761a0a8" target="_blank" rel="noopener noreferrer">Leila Lamoureux</a>
+              </div>
+              <div class="agenda-speaker-designation">Director, Babson Greenworks &nbsp;&middot;&nbsp; Babson College</div>
+            </div>
+          </div>
+          <div class="agenda-tracks">
+            <span class="agenda-track-pill">Campus Sustainability</span>
+            <span class="agenda-track-pill">20th Anniversary</span>
+          </div>
         </div>
       </div>
       <div class="agenda-item reveal">
-        <div class="agenda-time">10:30 AM</div>
+        <div class="agenda-time">9:30 AM – 10:15 AM</div>
         <div class="agenda-node major"></div>
         <div class="agenda-content">
           <h4>Fireside Chat: Entrepreneurs for Impact</h4>
@@ -1499,20 +1631,47 @@ footer {
               <div class="agenda-speaker-title">Founding Cleantech Investor &amp; BSEC Conference Chair</div>
             </div>
           </div>
-          <div class="agenda-speaker">
-            <div class="agenda-speaker-photo" style="background-image:url('https://i.imgur.com/2y8AvXE.jpeg');" aria-hidden="true"></div>
-            <div class="agenda-speaker-info">
-              <div class="agenda-speaker-name">
-                <a href="https://www.linkedin.com/in/bill-huss-610b1a5" target="_blank" rel="noopener noreferrer">William &ldquo;Bill&rdquo; Huss, Ph.D. &mdash; Moderator</a>
-              </div>
-              <div class="agenda-speaker-designation">Adjunct Lecturer, Math &amp; Science Division &nbsp;·&nbsp; Babson College</div>
-              <div class="agenda-speaker-title">Faculty Advisor, Babson Energy &amp; Environmental Club (2008&ndash;Present) &nbsp;·&nbsp; Fmr. SVP &amp; COO, XENERGY Inc.</div>
-            </div>
-          </div>
           <div class="agenda-tracks">
             <span class="agenda-track-pill">Impact Investing</span>
             <span class="agenda-track-pill">Sustainability Legacy</span>
           </div>
+        </div>
+      </div>
+      <div class="agenda-item reveal">
+        <div class="agenda-time">10:15 AM – 11:00 AM</div>
+        <div class="agenda-node major"></div>
+        <div class="agenda-content">
+          <h4>Panel: BSEC Alumni Conversation</h4>
+          <p>An ecosystem view of the sustainability &amp; energy landscape — from the early days of BSEC on campus, to today's frontiers, to what comes next. Alumni from across the club's 20-year history reflect on how the field has evolved and what it means to build for impact.</p>
+          <div class="agenda-speaker">
+            <div class="agenda-speaker-photo" style="background-image:url('https://i.imgur.com/KDYewa8.jpeg');" aria-hidden="true"></div>
+            <div class="agenda-speaker-info">
+              <div class="agenda-speaker-name">
+                <a href="https://www.linkedin.com/in/johnchaimanis/" target="_blank" rel="noopener noreferrer">John Chaimanis</a>
+              </div>
+              <div class="agenda-speaker-designation">Babson &rsquo;08 &nbsp;·&nbsp; BSEC Co-Founder</div>
+              <div class="agenda-speaker-title">CEO, Kendall Sustainable Infrastructure</div>
+            </div>
+          </div>
+          <div class="agenda-speaker">
+            <div class="agenda-speaker-info">
+              <div class="agenda-speaker-name">Additional Alumni Panelists</div>
+              <div class="agenda-speaker-designation">Other former BSEC Speakers Be Announced</div>
+            </div>
+          </div>
+          <div class="agenda-tracks">
+            <span class="agenda-track-pill">Alumni &amp; Legacy</span>
+            <span class="agenda-track-pill">Ecosystem Building</span>
+            <span class="agenda-track-pill">20th Anniversary</span>
+          </div>
+        </div>
+      </div>
+      <div class="agenda-item reveal">
+        <div class="agenda-time">11:00 AM – 12:00 PM</div>
+        <div class="agenda-node major"></div>
+        <div class="agenda-content">
+          <h4>Keynote: Entrepreneurs for Impact</h4>
+          <p>Speaker to be announced · Knight Auditorium</p>
         </div>
       </div>
       <div class="agenda-item reveal">
@@ -1534,6 +1693,17 @@ footer {
             <span class="agenda-track-pill">VC for Impact</span>
             <span class="agenda-track-pill">Food &amp; Ag for Impact</span>
             <span class="agenda-track-pill">Fashion for Impact</span>
+          </div>
+
+          <div class="agenda-speaker">
+            <div class="agenda-speaker-photo" style="background-image:url('https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/Eric%20Hudson.png');" aria-hidden="true"></div>
+            <div class="agenda-speaker-info">
+              <div class="agenda-speaker-name">
+                <a href="https://www.linkedin.com/in/eric-hudson-5a577a152/" target="_blank" rel="noopener noreferrer">Eric Hudson</a>
+              </div>
+              <div class="agenda-speaker-designation">Founder &amp; CEO, Preserve</div>
+              <div class="agenda-speaker-title">Oceans for Impact Panel</div>
+            </div>
           </div>
         </div>
       </div>
@@ -1725,7 +1895,7 @@ footer {
       <p>© 2026 Babson Sustainability &amp; Energy Club · All rights reserved</p>
     </div>
     <div class="footer-compliance" aria-label="Babson compliance mark">
-      <img src="blob:https://imgur.com/f287dac2-e2b0-4f6a-8dce-7fa9340087f1" alt="Babson College, A Student-Led Event" loading="lazy" />
+      <img src="https://i.imgur.com/Mw9QE5K.png" alt="Babson College, A Student-Led Event" loading="lazy" />
     </div>
   </div>
 </footer>
