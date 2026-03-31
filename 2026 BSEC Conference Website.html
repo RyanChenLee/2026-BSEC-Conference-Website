@@ -271,6 +271,20 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid rgba(255,255,255,0.35);
 }
 .btn-outline:hover { border-color: var(--gold-lt); color: var(--gold-lt); transform: translateY(-2px); }
+.btn-sm {
+  font-size: 0.78rem;
+  padding: 0.6rem 1.4rem;
+}
+.btn-outline-dark {
+  background: transparent;
+  color: var(--g-deep);
+  border: 1px solid rgba(6, 60, 54, 0.35);
+}
+.btn-outline-dark:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-2px);
+}
 .hero-scroll-hint {
   position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
@@ -755,6 +769,60 @@ a { color: inherit; text-decoration: none; }
   background: rgba(37,199,184,0.08);
   border-color: rgba(37,199,184,0.25);
 }
+.agenda-track-pill.pill-volunteer {
+  color: var(--g-deep);
+  background: rgba(34, 139, 87, 0.12);
+  border-color: rgba(34, 139, 87, 0.45);
+}
+.agenda-track-pill.has-tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+}
+.agenda-track-pill.has-tooltip .agenda-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(320px, 78vw);
+  padding: 0.65rem 0.85rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.45;
+  text-align: left;
+  text-transform: none;
+  color: var(--white);
+  background: var(--g-deep);
+  border-radius: 4px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.22);
+  z-index: 30;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+.agenda-track-pill.has-tooltip .agenda-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -7px;
+  border: 7px solid transparent;
+  border-top-color: var(--g-deep);
+}
+.agenda-track-pill.has-tooltip:hover .agenda-tooltip,
+.agenda-track-pill.has-tooltip:focus-visible .agenda-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+.agenda-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.agenda-cta-row .btn { width: auto; }
 .pre-event-label {
   font-size: 0.7rem;
   font-weight: 600;
@@ -1215,6 +1283,9 @@ footer {
     width: 100%;
     justify-content: center;
   }
+  .agenda-cta-row .btn {
+    width: auto;
+  }
 }
 </style>
 </head>
@@ -1359,13 +1430,14 @@ footer {
       <div class="program-card reveal reveal-delay-1">
         <span class="program-number">02</span>
         <div class="program-icon"><i class="fas fa-layer-group"></i></div>
-        <h3>Four "For Impact" Tracks</h3>
-        <p>Afternoon breakouts in Malloy Hall — deep-dive sessions across the sectors where entrepreneurs are driving the most change.</p>
+        <h3>Five "For Impact" Tracks</h3>
+        <p>Afternoon breakouts in Malloy Hall — five concurrent deep-dive sessions across the sectors where entrepreneurs are driving the most change.</p>
         <ul class="tracks-list">
           <li>Energy for Impact</li>
           <li>VC for Impact</li>
           <li>Food &amp; Agriculture for Impact</li>
           <li>Fashion for Impact</li>
+          <li>Oceans for Impact</li>
         </ul>
       </div>
 
@@ -1373,7 +1445,7 @@ footer {
         <span class="program-number">03</span>
         <div class="program-icon"><i class="fas fa-rocket"></i></div>
         <h3>BSEC Sustainability &amp; Impact Venture Showcase</h3>
-        <p>Spotlighting the next generation of climate solutions from Babson student and alumni founders. Meet the entrepreneurs building what's next — before the world does.</p>
+        <p>Spotlighting the next generation of climate solutions from Babson student and alumni founders &mdash; including dedicated tables for FME student ventures, rotating in on a time-slot basis. Meet the entrepreneurs building what's next — before the world does.</p>
       </div>
 
       <div class="program-card reveal reveal-delay-3">
@@ -1395,7 +1467,7 @@ footer {
     <h2 class="reveal reveal-delay-1">Meet the Speakers</h2>
     <div class="speakers-notice reveal reveal-delay-2">
       <i class="fas fa-clock"></i>
-      Keynote and panelists announced on a rolling basis — check back soon.
+      Keynote and panelists announced on a rolling basis — FME student ventures joining the Venture Showcase — check back soon.
     </div>
     <div class="speakers-grid">
       <!-- Ordered by appearance in the agenda -->
@@ -1428,8 +1500,8 @@ footer {
       <div class="speaker-card reveal reveal-delay-1">
         <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/8DIULnv.jpeg');"></div>
         <div class="speaker-name">Mark Donohue</div>
-        <div class="speaker-role">Babson &rsquo;87 &nbsp;·&nbsp; Entrepreneur-in-Residence, 2008&ndash;2013</div>
-        <div class="speaker-org">Fireside Chat: Entrepreneurs for Impact</div>
+        <div class="speaker-role">Babson &rsquo;89 &nbsp;·&nbsp; Babson Clean Tech Entrepreneur-in-Residence, 2008&ndash;2013</div>
+        <div class="speaker-org">Honorary Chair &nbsp;&middot;&nbsp; Fireside Chat: Entrepreneurs for Impact</div>
         <div class="speaker-links">
           <a href="https://www.linkedin.com/in/markdonohue123/" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-linkedin"></i>
@@ -1452,7 +1524,7 @@ footer {
       </div>
 
       <div class="speaker-card reveal">
-        <div class="speaker-avatar" style="background-image:url('https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/Nicole%20LaChapelle.png');"></div>
+        <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/tf7SIVn.png');"></div>
         <div class="speaker-name">Nicole LaChapelle</div>
         <div class="speaker-role">Commissioner, Massachusetts Department of Conservation and Recreation (DCR)</div>
         <div class="speaker-org">
@@ -1468,12 +1540,12 @@ footer {
       </div>
 
       <div class="speaker-card reveal reveal-delay-1">
-        <div class="speaker-avatar" style="background-image:url('https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/Shiv%20Bhakta.png');"></div>
+        <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/Atjfy5v.png');"></div>
         <div class="speaker-name">Shiv Bhakta</div>
         <div class="speaker-role">Founder &amp; CEO,
           <a href="https://www.activesurfaces.xyz/" target="_blank" rel="noopener noreferrer">Active Surfaces</a>
         </div>
-        <div class="speaker-org">Keynote &nbsp;&middot;&nbsp; Energy for Impact</div>
+        <div class="speaker-org">Panelist &nbsp;&middot;&nbsp; Energy for Impact</div>
         <div class="speaker-links">
           <a href="https://www.linkedin.com/in/shivambhakta/" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-linkedin"></i>
@@ -1483,7 +1555,7 @@ footer {
       </div>
 
       <div class="speaker-card reveal reveal-delay-1">
-        <div class="speaker-avatar" style="background-image:url('https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/Jen%20Faigel.png');"></div>
+        <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/KZHhgMl.png');"></div>
         <div class="speaker-name">Jen Faigel</div>
         <div class="speaker-role">Co-Founder &amp; Executive Director,
           <a href="https://commonwealthkitchen.org/" target="_blank" rel="noopener noreferrer">CommonWealth Kitchen</a>
@@ -1591,7 +1663,25 @@ footer {
         <div class="agenda-node major"></div>
         <div class="agenda-content">
           <h4>Welcome &amp; BSEC Conference Kickoff</h4>
-          <p>Opening welcome from BSEC Co-Presidents Ryan Lee and Rashmi Tripathi. Remarks from President Stephen Spinelli Jr., Babson College.</p>
+          <p>Opening welcome from BSEC Co-Presidents Ryan Lee and Rashmi Tripathi.</p>
+          <div class="agenda-speaker">
+            <div class="agenda-speaker-photo" style="background-image:url('https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/Ryan%20Lee.png');" aria-hidden="true"></div>
+            <div class="agenda-speaker-info">
+              <div class="agenda-speaker-name">
+                <a href="https://www.linkedin.com/in/ryanchenlee/" target="_blank" rel="noopener noreferrer">Ryan Lee</a>
+              </div>
+              <div class="agenda-speaker-designation">Co-President, Babson Sustainability &amp; Energy Club &nbsp;·&nbsp; MBA &rsquo;27</div>
+            </div>
+          </div>
+          <div class="agenda-speaker">
+            <div class="agenda-speaker-photo" style="background-image:url('https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/Rashmi%20Tripathi.png');" aria-hidden="true"></div>
+            <div class="agenda-speaker-info">
+              <div class="agenda-speaker-name">
+                <a href="https://www.linkedin.com/in/rashmi-tripathi1/" target="_blank" rel="noopener noreferrer">Rashmi Tripathi</a>
+              </div>
+              <div class="agenda-speaker-designation">Co-President, Babson Sustainability &amp; Energy Club &nbsp;·&nbsp; MBA &rsquo;27</div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="agenda-item reveal">
@@ -1627,8 +1717,8 @@ footer {
               <div class="agenda-speaker-name">
                 <a href="https://www.linkedin.com/in/markdonohue123/" target="_blank" rel="noopener noreferrer">Mark Donohue</a>
               </div>
-              <div class="agenda-speaker-designation">Babson &rsquo;87 &nbsp;·&nbsp; Entrepreneur-in-Residence, 2008&ndash;2013</div>
-              <div class="agenda-speaker-title">Founding Cleantech Investor &amp; BSEC Conference Chair</div>
+              <div class="agenda-speaker-designation">Babson &rsquo;89 &nbsp;·&nbsp; Babson Clean Tech Entrepreneur-in-Residence, 2008&ndash;2013</div>
+              <div class="agenda-speaker-title">Pioneer in Impact Investing and Conscious Capitalism</div>
             </div>
           </div>
           <div class="agenda-tracks">
@@ -1649,7 +1739,7 @@ footer {
               <div class="agenda-speaker-name">
                 <a href="https://www.linkedin.com/in/johnchaimanis/" target="_blank" rel="noopener noreferrer">John Chaimanis</a>
               </div>
-              <div class="agenda-speaker-designation">Babson &rsquo;08 &nbsp;·&nbsp; BSEC Co-Founder</div>
+              <div class="agenda-speaker-designation">Babson MBA &rsquo;08 &nbsp;·&nbsp; BSEC Co-Founder</div>
               <div class="agenda-speaker-title">CEO, Kendall Sustainable Infrastructure</div>
             </div>
           </div>
@@ -1671,7 +1761,16 @@ footer {
         <div class="agenda-node major"></div>
         <div class="agenda-content">
           <h4>Keynote: Entrepreneurs for Impact</h4>
-          <p>Speaker to be announced · Knight Auditorium</p>
+          <p>Knight Auditorium</p>
+          <div class="agenda-speaker">
+            <div class="agenda-speaker-photo" style="background-image:url('https://i.imgur.com/tf7SIVn.png');" aria-hidden="true"></div>
+            <div class="agenda-speaker-info">
+              <div class="agenda-speaker-name">
+                <a href="https://www.linkedin.com/in/nicolelachapelle/" target="_blank" rel="noopener noreferrer">Nicole LaChapelle</a>
+              </div>
+              <div class="agenda-speaker-designation">Commissioner, Massachusetts Department of Conservation and Recreation (DCR)</div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="agenda-item reveal">
@@ -1687,32 +1786,26 @@ footer {
         <div class="agenda-node major"></div>
         <div class="agenda-content">
           <h4>Afternoon Breakout Tracks</h4>
-          <p>Malloy Hall · Four concurrent sessions</p>
+          <p>Malloy Hall · Five concurrent sessions</p>
           <div class="agenda-tracks">
             <span class="agenda-track-pill">Energy for Impact</span>
             <span class="agenda-track-pill">VC for Impact</span>
             <span class="agenda-track-pill">Food &amp; Ag for Impact</span>
             <span class="agenda-track-pill">Fashion for Impact</span>
-          </div>
-
-          <div class="agenda-speaker">
-            <div class="agenda-speaker-photo" style="background-image:url('https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/Eric%20Hudson.png');" aria-hidden="true"></div>
-            <div class="agenda-speaker-info">
-              <div class="agenda-speaker-name">
-                <a href="https://www.linkedin.com/in/eric-hudson-5a577a152/" target="_blank" rel="noopener noreferrer">Eric Hudson</a>
-              </div>
-              <div class="agenda-speaker-designation">Founder &amp; CEO, Preserve</div>
-              <div class="agenda-speaker-title">Oceans for Impact Panel</div>
-            </div>
+            <span class="agenda-track-pill">Oceans for Impact</span>
           </div>
         </div>
       </div>
       <div class="agenda-item reveal">
-        <div class="agenda-time">4:00 PM</div>
+        <div class="agenda-time">1:30 PM – 5:00 PM</div>
         <div class="agenda-node major"></div>
         <div class="agenda-content">
           <h4>BSEC Sustainability &amp; Impact Venture Showcase</h4>
-          <p>Student and alumni founders present next-generation climate solutions</p>
+          <p>Knight Auditorium · Student and alumni founders present next-generation climate solutions &mdash; including a dedicated showcase from Babson&rsquo;s own FME (Foundations of Management and Entrepreneurship) student ventures. FME teams will rotate through dedicated exhibitor tables on a time-slot basis, right after completing their own end-of-semester presentations.</p>
+          <div class="agenda-tracks">
+            <span class="agenda-track-pill">FME Student Ventures</span>
+            <span class="agenda-track-pill">Rotating Time Slots</span>
+          </div>
         </div>
       </div>
       <div class="agenda-item reveal">
@@ -1720,7 +1813,7 @@ footer {
         <div class="agenda-node major"></div>
         <div class="agenda-content">
           <h4>Entrepreneur for Impact Award Ceremony</h4>
-          <p>Celebrating entrepreneurs creating lasting sustainable impact</p>
+          <p>Celebrating entrepreneurs creating lasting sustainable impact &mdash; including recognition of the FME Good Business Index winner, the standout undergraduate venture demonstrating the most compelling sustainable value proposition across all 18 FME sections.</p>
         </div>
       </div>
       <div class="agenda-item reveal">
@@ -1729,6 +1822,27 @@ footer {
         <div class="agenda-content">
           <h4>Closing Reception &amp; Community Networking</h4>
           <p>Celebrate 20 years with the community that built the Babson Sustainability and Energy Club</p>
+        </div>
+      </div>
+      <div class="day-label reveal">Saturday, April 25 &mdash; Post-Conference Volunteer Day</div>
+      <div class="agenda-item reveal">
+        <div class="agenda-time">9:00 AM</div>
+        <div class="agenda-node major"></div>
+        <div class="agenda-content">
+          <h4>Charles River Earth Day Cleanup</h4>
+          <img src="https://i.imgur.com/F2pX4x3.jpeg" alt="Charles River Watershed Association Earth Day cleanup flyer" width="1920" height="1080" style="display: block; width: 100%; max-width: 680px; height: auto; margin: 0.75rem 0;" />
+          <p>Join the 27th Annual Charles River Watershed Association Earth Day Cleanup at Elm Bank on the Charles River &mdash; right in Babson&rsquo;s backyard. Pick up litter, restore the watershed, and extend the spirit of the conference into action. Open to all conference attendees. Free student volunteer registration available; sponsored team spots also available.</p>
+          <div class="agenda-tracks">
+            <span class="agenda-track-pill pill-volunteer">Volunteer &mdash; Free Sign-Up</span>
+            <span class="agenda-track-pill has-tooltip" tabindex="0" aria-describedby="crwa-sponsor-tooltip">
+              Sponsor our Babson Team &middot; $2,000
+              <span class="agenda-tooltip" id="crwa-sponsor-tooltip" role="tooltip">Sponsoring the Babson cleanup team funds a dedicated site on the Charles River for our group on April 25, 2026 &mdash; the day after the BSEC Conference. Your contribution supports CRWA&rsquo;s mission to protect and restore the Charles River watershed.</span>
+            </span>
+          </div>
+          <div class="agenda-cta-row">
+            <a href="https://cglink.me/22L/r376162" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm">Sign Up to Volunteer</a>
+            <a href="mailto:gradsustainability@babson.edu?subject=BSEC%20Earth%20Day%20Cleanup%20-%20Sponsor%20our%20Babson%20Team" class="btn btn-gold btn-sm">Sponsor our Babson Team</a>
+          </div>
         </div>
       </div>
     </div>
@@ -1754,8 +1868,8 @@ footer {
           <div class="sponsor-logo-box mark-donohue-card reveal">
             <div class="sponsor-person-avatar" style="background-image: url('https://i.imgur.com/8DIULnv.jpeg');"></div>
             <div class="sponsor-person-name"><a href="https://www.linkedin.com/in/markdonohue123/" target="_blank" rel="noopener noreferrer">Mark Donohue</a></div>
-            <div class="sponsor-person-role">Babson &rsquo;87 &nbsp;·&nbsp; Entrepreneur-in-Residence, 2008&ndash;2013</div>
-            <div class="sponsor-person-title">Founding Cleantech Investor &amp; BSEC Conference Chair</div>
+            <div class="sponsor-person-role">Babson &rsquo;89 &nbsp;·&nbsp; Babson Clean Tech Entrepreneur-in-Residence, 2008&ndash;2013</div>
+            <div class="sponsor-person-title">Pioneer in Impact Investing and Conscious Capitalism</div>
           </div>
           <div class="sponsor-logo-box placeholder">Presenting Sponsor · TBD</div>
         </div>
@@ -1808,6 +1922,25 @@ footer {
         </div>
         <div class="tier-logos">
           <div class="sponsor-logo-box placeholder">In-Kind Partner · TBD</div>
+        </div>
+      </div>
+
+      <div class="sponsor-tier reveal" style="margin-top: 2rem;">
+        <div class="tier-header">
+          <span class="tier-name">Community Partner</span>
+          <div class="tier-line"></div>
+        </div>
+        <div class="tier-logos">
+          <div class="sponsor-logo-box" style="min-width: 200px;">
+            <a href="https://www.crwa.org" target="_blank" rel="noopener noreferrer">
+              <!-- REPLACE: insert CRWA logo image when received from Emily -->
+              Charles River Watershed Association
+            </a>
+          </div>
+          <div class="sponsor-logo-box" style="min-width: 200px;">
+            <!-- REPLACE: insert Good Business Index / FME logo image when received from Diana -->
+            FME Good Business Index
+          </div>
         </div>
       </div>
 
