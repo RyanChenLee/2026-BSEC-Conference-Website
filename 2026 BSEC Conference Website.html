@@ -1060,6 +1060,15 @@ a { color: inherit; text-decoration: none; }
   margin: 0 auto 12px;
   flex-shrink: 0;
 }
+.sponsor-fund-logo {
+  max-width: 200px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto 14px;
+  object-fit: contain;
+}
 .sponsor-person-name {
   font-family: var(--display);
   font-size: 1.2rem;
@@ -1451,6 +1460,7 @@ footer {
     <li><a href="https://www.bseclub.org/#speakers">Speakers</a></li>
     <li><a href="https://www.bseclub.org/#program">Program</a></li>
     <li><a href="https://www.bseclub.org/#sponsors">Sponsors</a></li>
+    <li><a href="https://www.bseclub.org/press-release" target="_blank" rel="noopener noreferrer">Press Release</a></li>
     <li><a href="https://cglink.me/22L/r375910" target="_blank" class="nav-cta">Get Tickets</a></li>
   </ul>
   <button class="nav-hamburger" id="hamburger" aria-label="Menu">
@@ -1727,17 +1737,16 @@ footer {
         </div>
       </div>
       <div class="agenda-item reveal">
-        <div class="agenda-time">11:00 AM</div>
+        <div class="agenda-time">11:00 &ndash; 11:05 AM</div>
         <div class="agenda-node"></div>
         <div class="agenda-content">
-          <h4>Keynote Introduction</h4>
-          <p>Babson President Stephen Spinelli Jr. formally introduces our headline keynote speaker, David Evans Shaw, in a brief and personal introduction from the stage.</p>
+          <h4>Introductory Remarks: David Evans Shaw</h4>
+          <p>Cindy Klein Marmer offers introductory remarks to welcome keynote speaker David Evans Shaw to the stage.</p>
           <div class="agenda-speaker">
-            <div class="agenda-speaker-photo" style="background-image:url('https://i.imgur.com/ejywEAz.jpeg');" aria-hidden="true"></div>
             <div class="agenda-speaker-info">
-              <div class="agenda-speaker-name"><a href="https://www.linkedin.com/in/stephen-spinelli-babson/" target="_blank" rel="noopener noreferrer">Stephen Spinelli Jr.</a></div>
-              <div class="agenda-speaker-designation">MBA &rsquo;92, PhD</div>
-              <div class="agenda-speaker-title">President, Babson College</div>
+              <div class="agenda-speaker-name"><a href="https://www.linkedin.com/in/cindy-klein-marmer" target="_blank" rel="noopener noreferrer">Cindy Klein Marmer</a></div>
+              <div class="agenda-speaker-designation">MBA &rsquo;02 &middot; P&rsquo;29</div>
+              <div class="agenda-speaker-title">Executive Director, Arthur M. Blank Center for Entrepreneurship</div>
             </div>
           </div>
         </div>
@@ -1789,7 +1798,7 @@ footer {
             <button type="button" class="agenda-track-pill breakout-session-btn" role="tab" id="breakout-tab-fashion" aria-controls="breakout-session-panel" aria-selected="false" tabindex="-1" data-session-key="fashion">Fashion for Impact</button>
             <button type="button" class="agenda-track-pill breakout-session-btn" role="tab" id="breakout-tab-energy" aria-controls="breakout-session-panel" aria-selected="false" tabindex="-1" data-session-key="energy">Energy for Impact</button>
             <button type="button" class="agenda-track-pill breakout-session-btn" role="tab" id="breakout-tab-food" aria-controls="breakout-session-panel" aria-selected="false" tabindex="-1" data-session-key="food">Food &amp; Ag for Impact</button>
-            <button type="button" class="agenda-track-pill breakout-session-btn" role="tab" id="breakout-tab-vc" aria-controls="breakout-session-panel" aria-selected="false" tabindex="-1" data-session-key="vc">VC for Impact</button>
+            <button type="button" class="agenda-track-pill breakout-session-btn" role="tab" id="breakout-tab-vc" aria-controls="breakout-session-panel" aria-selected="false" tabindex="-1" data-session-key="vc">Investments for Impact</button>
           </div>
           <div id="breakout-session-panel" class="breakout-session-panel" role="tabpanel" tabindex="0" aria-labelledby="breakout-tab-oceans" aria-live="polite"></div>
         </div>
@@ -1826,17 +1835,12 @@ footer {
         <div class="agenda-content">
           <h4>Charles River Earth Day Cleanup</h4>
           <img src="https://i.imgur.com/F2pX4x3.jpeg" alt="Charles River Watershed Association Earth Day cleanup flyer" width="1920" height="1080" style="display: block; width: 100%; max-width: 680px; height: auto; margin: 0.75rem 0;" />
-          <p>Join the 27th Annual Charles River Watershed Association Earth Day Cleanup at Elm Bank on the Charles River &mdash; right in Babson&rsquo;s backyard. Pick up litter, restore the watershed, and extend the spirit of the conference into action. Open to all conference attendees. Free student volunteer registration available; sponsored team spots also available.</p>
+          <p>Join the 27th Annual Charles River Watershed Association Earth Day Cleanup at Elm Bank on the Charles River &mdash; right in Babson&rsquo;s backyard. Pick up litter, restore the watershed, and extend the spirit of the conference into action. Open to all conference attendees. Free student volunteer registration available.</p>
           <div class="agenda-tracks">
             <span class="agenda-track-pill pill-volunteer">Volunteer &mdash; Free Sign-Up</span>
-            <span class="agenda-track-pill has-tooltip" tabindex="0" aria-describedby="crwa-sponsor-tooltip">
-              Sponsor our Babson Team &middot; $2,000
-              <span class="agenda-tooltip" id="crwa-sponsor-tooltip" role="tooltip">Sponsoring the Babson cleanup team funds a dedicated site on the Charles River for our group on April 25, 2026 &mdash; the day after the BSEC Conference. Your contribution supports CRWA&rsquo;s mission to protect and restore the Charles River watershed.</span>
-            </span>
           </div>
           <div class="agenda-cta-row">
             <a href="https://cglink.me/22L/r376162" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm">Sign Up to Volunteer</a>
-            <a href="mailto:gradsustainability@babson.edu?subject=BSEC%20Earth%20Day%20Cleanup%20-%20Sponsor%20our%20Babson%20Team" class="btn btn-gold btn-sm">Sponsor our Babson Team</a>
           </div>
         </div>
       </div>
@@ -1854,15 +1858,6 @@ footer {
       Speaker announcements ongoing — check back for the latest additions to our lineup.
     </div>
     <div class="speakers-grid">
-      <div class="speaker-card reveal">
-        <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/ejywEAz.jpeg');"></div>
-        <div class="speaker-name">Stephen Spinelli Jr.</div>
-        <div class="speaker-role">President, Babson College</div>
-        <div class="speaker-org">Opening Remarks</div>
-        <div class="speaker-links">
-          <a href="https://www.linkedin.com/in/stephen-spinelli-babson/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
-        </div>
-      </div>
       <div class="speaker-card reveal reveal-delay-1">
         <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/mWhrAS3.png');"></div>
         <div class="speaker-name">David Evans Shaw</div>
@@ -1945,9 +1940,9 @@ footer {
         </div>
       </div>
       <div class="speaker-card reveal reveal-delay-2">
-        <div class="speaker-avatar" style="background-image:url('https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/Eric%20Hudson.png');"></div>
+        <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/DeA3Epr.jpeg');"></div>
         <div class="speaker-name">Eric Hudson</div>
-        <div class="speaker-role">Founder &amp; CEO, Preserve</div>
+        <div class="speaker-role">Founder &amp; CEO, Preserve &middot; MBA'92</div>
         <div class="speaker-org">Panelist &middot; Oceans for Impact</div>
         <div class="speaker-links">
           <a href="https://www.linkedin.com/in/eric-hudson-5a577a152/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
@@ -1956,10 +1951,19 @@ footer {
       <div class="speaker-card reveal reveal-delay-2">
         <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/ih7u6Ze.png');"></div>
         <div class="speaker-name">Conor Carlin</div>
-        <div class="speaker-role">Business Development, Clefs Advisory LLC &middot; Babson Alum</div>
+        <div class="speaker-role">Founder &amp; President, Clefs Advisory LLC &middot; MBA &rsquo;10, Babson College</div>
         <div class="speaker-org">Panelist &middot; Oceans for Impact</div>
         <div class="speaker-links">
           <a href="https://www.linkedin.com/in/conor-carlin/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+        </div>
+      </div>
+      <div class="speaker-card reveal reveal-delay-3">
+        <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/zrcWUpN.jpeg');"></div>
+        <div class="speaker-name">Michael Weir</div>
+        <div class="speaker-role">Research Specialist, Marine Policy Center &middot; Woods Hole Oceanographic Institution</div>
+        <div class="speaker-org">Panelist &middot; Oceans for Impact</div>
+        <div class="speaker-links">
+          <a href="https://www.linkedin.com/in/michael-weir-ph-d-b4114899" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
         </div>
       </div>
       <div class="speaker-card reveal reveal-delay-3">
@@ -1998,15 +2002,6 @@ footer {
           <a href="https://www.linkedin.com/in/ndarbeloff/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
         </div>
       </div>
-      <div class="speaker-card reveal reveal-delay-1">
-        <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/Atjfy5v.png');"></div>
-        <div class="speaker-name">Shiv Bhakta</div>
-        <div class="speaker-role">Founder &amp; CEO, Active Surfaces &middot; MIT MS+MBA &middot; Forbes 30 Under 30 Energy</div>
-        <div class="speaker-org">Panelist &middot; Energy for Impact</div>
-        <div class="speaker-links">
-          <a href="https://www.linkedin.com/in/shivambhakta/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
-        </div>
-      </div>
       <div class="speaker-card reveal reveal-delay-2">
         <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/TYcfCTT.png');"></div>
         <div class="speaker-name">Ignacio Estella</div>
@@ -2014,15 +2009,6 @@ footer {
         <div class="speaker-org">Panelist &middot; Energy for Impact</div>
         <div class="speaker-links">
           <a href="https://www.linkedin.com/in/ignacio-estella-8a8578" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
-        </div>
-      </div>
-      <div class="speaker-card reveal reveal-delay-2">
-        <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/XAVSk5V.png');"></div>
-        <div class="speaker-name">Luke Winston-Almanzar</div>
-        <div class="speaker-role">Founder, Reservoir &middot; Harvard Business School</div>
-        <div class="speaker-org">Panelist &middot; Energy for Impact</div>
-        <div class="speaker-links">
-          <a href="https://www.linkedin.com/in/lukewinston" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
         </div>
       </div>
       <div class="speaker-card reveal reveal-delay-3">
@@ -2037,8 +2023,8 @@ footer {
       <div class="speaker-card reveal">
         <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/S7bgWsY.png');"></div>
         <div class="speaker-name">Brigitte Muehlmann</div>
-        <div class="speaker-role">Moderator &middot; VC for Impact</div>
-        <div class="speaker-org">VC for Impact</div>
+        <div class="speaker-role">Moderator &middot; Investments for Impact</div>
+        <div class="speaker-org">Investments for Impact</div>
         <div class="speaker-links">
           <a href="https://www.linkedin.com/in/bmuehlmann/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
         </div>
@@ -2047,9 +2033,27 @@ footer {
         <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/4syWWxF.png');"></div>
         <div class="speaker-name">Samir Karoum</div>
         <div class="speaker-role">Managing Director &middot; Bombelli Ventures</div>
-        <div class="speaker-org">Panelist &middot; VC for Impact</div>
+        <div class="speaker-org">Panelist &middot; Investments for Impact</div>
         <div class="speaker-links">
           <a href="https://www.linkedin.com/in/samir-karoum-093b63/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+        </div>
+      </div>
+      <div class="speaker-card reveal reveal-delay-1">
+        <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/JXbf2ux.jpeg');"></div>
+        <div class="speaker-name">Danny Donovan</div>
+        <div class="speaker-role">Director, Relationship Manager &middot; Silicon Valley Bank</div>
+        <div class="speaker-org">Panelist &middot; Investments for Impact</div>
+        <div class="speaker-links">
+          <a href="https://www.linkedin.com/in/danielhdonovan/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+        </div>
+      </div>
+      <div class="speaker-card reveal reveal-delay-1">
+        <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/7o3Luik.jpeg');"></div>
+        <div class="speaker-name">Doug Brown</div>
+        <div class="speaker-role">Chairman of the Board &middot; Iv3 Aqua Group</div>
+        <div class="speaker-org">Panelist &middot; Investments for Impact</div>
+        <div class="speaker-links">
+          <a href="https://linkedin.com/in/douglas-brown-57445421/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
         </div>
       </div>
       <div class="speaker-card reveal reveal-delay-1">
@@ -2062,7 +2066,7 @@ footer {
         </div>
       </div>
       <div class="speaker-card reveal reveal-delay-2">
-        <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/k2PDqKH.png');"></div>
+        <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/1juMikj.jpeg');"></div>
         <div class="speaker-name">Christopher Rassias</div>
         <div class="speaker-role">VP Business Development &middot; Bright Feeds</div>
         <div class="speaker-org">Panelist &middot; Food &amp; Agriculture for Impact</div>
@@ -2095,7 +2099,7 @@ footer {
         <span class="program-number">01</span>
         <div class="program-icon"><i class="fas fa-microphone-lines"></i></div>
         <h3>Morning Program: Vision &amp; Context</h3>
-        <p>Knight Auditorium · Alumni spotlights, keynote conversations, and a headline keynote address from David Evans Shaw — introduced by Babson President Stephen Spinelli Jr.</p>
+        <p>Knight Auditorium · Alumni spotlights, keynote conversations, and a headline keynote address from David Evans Shaw.</p>
         <!-- REPLACE: add confirmed keynote speaker name and title when announced -->
       </div>
 
@@ -2106,7 +2110,7 @@ footer {
         <p>Afternoon breakouts in Malloy Hall — five 45-minute sessions across three time blocks, running two concurrently per block.</p>
         <ul class="tracks-list">
           <li>Energy for Impact</li>
-          <li>VC for Impact</li>
+          <li>Investments for Impact</li>
           <li>Food &amp; Agriculture for Impact</li>
           <li>Fashion for Impact</li>
           <li>Oceans for Impact</li>
@@ -2149,10 +2153,9 @@ footer {
         </div>
         <div class="tier-logos">
           <div class="sponsor-logo-box mark-donohue-card reveal">
-            <div class="sponsor-person-avatar" style="background-image: url('https://i.imgur.com/8DIULnv.jpeg');"></div>
+            <img src="https://i.imgur.com/tZlMJuz.jpeg" alt="Mark Donohue fund logo" class="sponsor-fund-logo">
             <div class="sponsor-person-name"><a href="https://www.linkedin.com/in/markdonohue123/" target="_blank" rel="noopener noreferrer">Mark Donohue</a></div>
             <div class="sponsor-person-role">Babson &rsquo;89 &nbsp;·&nbsp; Babson Cleantech Entrepreneur-in-Residence, 2008&ndash;2013</div>
-            <div class="sponsor-person-title">Pioneer in Impact Investing and Conscious Capitalism</div>
           </div>
           <div class="sponsor-logo-box placeholder">Presenting Sponsor · TBD</div>
         </div>
@@ -2175,8 +2178,18 @@ footer {
         </div>
         <div class="tier-logos">
           <div class="sponsor-logo-box">
+            <a href="https://kendallsustainableinfrastructure.com/" target="_blank" rel="noopener noreferrer">
+              <img src="https://i.imgur.com/S7EpHbp.png" alt="Kendall Sustainable Infrastructure logo">
+            </a>
+          </div>
+          <div class="sponsor-logo-box">
             <a href="https://www.babson.edu/sustainability/" target="_blank" rel="noopener noreferrer">
               <img src="https://i.imgur.com/6CM0Kpk.jpeg" alt="Babson Greenworks logo">
+            </a>
+          </div>
+          <div class="sponsor-logo-box">
+            <a href="https://lifeguides.com/" target="_blank" rel="noopener noreferrer">
+              <img src="https://i.imgur.com/8h4Uf2c.png" alt="LifeGuides logo">
             </a>
           </div>
         </div>
@@ -2189,13 +2202,13 @@ footer {
         </div>
         <div class="tier-logos">
           <div class="sponsor-logo-box">
-            <a href="https://kendallsustainableinfrastructure.com/" target="_blank" rel="noopener noreferrer">
-              <img src="https://i.imgur.com/S7EpHbp.png" alt="Kendall Sustainable Infrastructure logo">
+            <a href="https://www.exodysenergy.com/" target="_blank" rel="noopener noreferrer">
+              <img src="https://i.imgur.com/PUHJt4n.jpeg" alt="Exodys Energy logo">
             </a>
           </div>
           <div class="sponsor-logo-box">
-            <a href="https://www.exodysenergy.com/" target="_blank" rel="noopener noreferrer">
-              <img src="https://i.imgur.com/PUHJt4n.jpeg" alt="Exodys Energy logo">
+            <a href="https://www.revisionenergy.com/" target="_blank" rel="noopener noreferrer">
+              <img src="https://i.imgur.com/1AIFbBr.png" alt="ReVision Energy logo">
             </a>
           </div>
         </div>
@@ -2229,8 +2242,10 @@ footer {
             </a>
           </div>
           <div class="sponsor-logo-box" style="min-width: 200px; height: auto; min-height: 56px; flex-direction: column; gap: 0.4rem; padding: 0.65rem 1.4rem; text-align: center;">
-            <img src="https://i.imgur.com/EJQrRPD.png" alt="FME Good Business Index logo">
-            <span style="font-family: var(--serif); font-size: 0.82rem; font-weight: 600; color: var(--g-deep); line-height: 1.25;">FME Good Business Index</span>
+            <a href="https://www.babson.edu/sustainability/education-integration/good-business-index-certification/" target="_blank" rel="noopener noreferrer" style="display: flex; flex-direction: column; align-items: center; gap: 0.4rem; text-decoration: none; color: var(--g-deep);">
+              <img src="https://i.imgur.com/EJQrRPD.png" alt="FME Good Business Index logo">
+              <span style="font-family: var(--serif); font-size: 0.82rem; font-weight: 600; color: var(--g-deep); line-height: 1.25;">FME Good Business Index</span>
+            </a>
           </div>
         </div>
       </div>
@@ -2421,18 +2436,19 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   const sessions = {
     oceans: {
       title: 'Oceans for Impact',
-      meta: '1:15-2:00 PM',
+      meta: '1:15-2:00 PM · Malloy 101',
       blurb: 'A conversation on ocean innovation, conservation, and maritime entrepreneurship.',
       speakers: [
         { name: 'Prof. Sinan Erzurumlu', designation: 'Moderator', title: 'Professor, Operations & Information Management · Babson College', linkedin: 'https://www.linkedin.com/in/sinan-erzurumlu/', photo: 'https://i.imgur.com/ffhWEh8.png' },
-        { name: 'Eric Hudson', designation: 'Panelist', title: 'Founder & CEO, Preserve', linkedin: 'https://www.linkedin.com/in/eric-hudson-5a577a152/', photo: 'https://babson.sharepoint.com/sites/gradsustainability/Shared%20Documents/Apps/Microsoft%20Forms/BSEC%20Spring%202026%20Leadership%20Onboarding%20Form/Question/Eric%20Hudson.png' },
-        { name: 'Conor Carlin', designation: 'Panelist', title: 'Business Development, Clefs Advisory LLC · Babson Alum', linkedin: 'https://www.linkedin.com/in/conor-carlin/', photo: 'https://i.imgur.com/ih7u6Ze.png' },
+        { name: 'Eric Hudson', designation: 'Panelist', title: "Founder & CEO, Preserve · MBA'92", linkedin: 'https://www.linkedin.com/in/eric-hudson-5a577a152/', photo: 'https://i.imgur.com/DeA3Epr.jpeg' },
+        { name: 'Conor Carlin', designation: 'Panelist', title: "Founder & President, Clefs Advisory LLC · MBA '10, Babson College", linkedin: 'https://www.linkedin.com/in/conor-carlin/', photo: 'https://i.imgur.com/ih7u6Ze.png' },
+        { name: 'Michael Weir', designation: 'Panelist', title: 'Research Specialist, Marine Policy Center · Woods Hole Oceanographic Institution', linkedin: 'https://www.linkedin.com/in/michael-weir-ph-d-b4114899', photo: 'https://i.imgur.com/zrcWUpN.jpeg' },
         { name: 'Rockford Weitz', designation: 'Panelist', title: 'Director of Maritime & Arctic Studies · Tufts / The Fletcher School', linkedin: 'https://www.linkedin.com/in/rockford/', photo: 'https://i.imgur.com/hTADemz.png' }
       ]
     },
     fashion: {
       title: 'Fashion for Impact',
-      meta: '1:15-2:00 PM',
+      meta: '1:15-2:00 PM · Malloy 102',
       blurb: 'Sustainable fashion value chains, materials, and circular models.',
       speakers: [
         { name: 'Caroline Daniels', designation: 'Moderator', title: 'Fashion for Impact', linkedin: 'https://www.linkedin.com/in/danielscaroline/', photo: 'https://i.imgur.com/wDijGf3.png' }
@@ -2444,30 +2460,31 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
       blurb: 'Grid, clean energy markets, and scaling climate ventures.',
       speakers: [
         { name: 'Prashant Khorana', designation: 'Moderator', title: 'Director, Power & Renewables Consulting at Wood Mackenzie', linkedin: 'https://www.linkedin.com/in/prashantkhorana/', photo: 'https://i.imgur.com/jTZMqcg.png' },
+        { name: 'John Chaimanis', designation: 'Panelist', title: "CEO, Kendall Sustainable Infrastructure · BSEC Co-Founder · MBA '07, Babson College", linkedin: 'https://www.linkedin.com/in/johnchaimanis/', photo: 'https://i.imgur.com/KDYewa8.jpeg' },
         { name: "Nick d'Arbeloff", designation: 'Panelist', title: 'Director of Market Development · ReVision Energy', linkedin: 'https://www.linkedin.com/in/ndarbeloff/', photo: 'https://i.imgur.com/cD9rk43.png' },
-        { name: 'Shiv Bhakta', designation: 'Panelist', title: 'Founder & CEO, Active Surfaces · MIT MS+MBA · Forbes 30 Under 30 Energy', linkedin: 'https://www.linkedin.com/in/shivambhakta/', photo: 'https://i.imgur.com/Atjfy5v.png' },
         { name: 'Ignacio Estella', designation: 'Panelist', title: 'SVP Talent, Innovation & Equal Opportunity · Avangrid (Iberdrola Group)', linkedin: 'https://www.linkedin.com/in/ignacio-estella-8a8578', photo: 'https://i.imgur.com/TYcfCTT.png' },
-        { name: 'Luke Winston-Almanzar', designation: 'Panelist', title: 'Founder, Reservoir · Harvard Business School', linkedin: 'https://www.linkedin.com/in/lukewinston', photo: 'https://i.imgur.com/XAVSk5V.png' },
         { name: 'Erin Smith', designation: 'Panelist', title: 'Clean Grid Director · Environmental League of Massachusetts', linkedin: 'https://www.linkedin.com/in/erin-smith-820b2950/', photo: 'https://i.imgur.com/rmXFihE.png' }
       ]
     },
     food: {
       title: 'Food & Agriculture for Impact',
-      meta: '2:15-3:00 PM',
+      meta: '2:15-3:00 PM · Malloy 102',
       blurb: 'Food-system innovation, waste-to-value, and resilient supply chains.',
       speakers: [
         { name: 'Jen Faigel', designation: 'Panelist', title: 'Co-Founder & Executive Director, CommonWealth Kitchen', linkedin: 'https://www.linkedin.com/in/jenfaigel/', photo: 'https://i.imgur.com/KZHhgMl.png' },
-        { name: 'Christopher Rassias', designation: 'Panelist', title: 'VP Business Development · Bright Feeds', linkedin: 'https://www.linkedin.com/in/christopher-rassias-793a8234/', photo: 'https://i.imgur.com/k2PDqKH.png' },
+        { name: 'Christopher Rassias', designation: 'Panelist', title: 'VP Business Development · Bright Feeds', linkedin: 'https://www.linkedin.com/in/christopher-rassias-793a8234/', photo: 'https://i.imgur.com/1juMikj.jpeg' },
         { name: 'JC Arce', designation: 'Panelist', title: 'Co-Founder & CEO, Tidefield', linkedin: 'https://www.linkedin.com/in/josecarce/', photo: 'https://i.imgur.com/502eGWi.png' }
       ]
     },
     vc: {
-      title: 'VC for Impact',
-      meta: '3:15-4:00 PM',
+      title: 'Investments for Impact',
+      meta: '3:15-4:00 PM · Malloy 101',
       blurb: 'Financing pathways and what impact investors look for.',
       speakers: [
-        { name: 'Brigitte Muehlmann', designation: 'Moderator', title: 'VC for Impact', linkedin: 'https://www.linkedin.com/in/bmuehlmann/', photo: 'https://i.imgur.com/S7bgWsY.png' },
-        { name: 'Samir Karoum', designation: 'Panelist', title: 'Managing Director · Bombelli Ventures', linkedin: 'https://www.linkedin.com/in/samir-karoum-093b63/', photo: 'https://i.imgur.com/4syWWxF.png' }
+        { name: 'Brigitte Muehlmann', designation: 'Moderator', title: 'Investments for Impact', linkedin: 'https://www.linkedin.com/in/bmuehlmann/', photo: 'https://i.imgur.com/S7bgWsY.png' },
+        { name: 'Samir Karoum', designation: 'Panelist', title: 'Managing Director · Bombelli Ventures', linkedin: 'https://www.linkedin.com/in/samir-karoum-093b63/', photo: 'https://i.imgur.com/4syWWxF.png' },
+        { name: 'Danny Donovan', designation: 'Panelist', title: 'Director, Relationship Manager · Silicon Valley Bank', linkedin: 'https://www.linkedin.com/in/danielhdonovan/', photo: 'https://i.imgur.com/JXbf2ux.jpeg' },
+        { name: 'Doug Brown', designation: 'Panelist', title: 'Chairman of the Board · Iv3 Aqua Group', linkedin: 'https://linkedin.com/in/douglas-brown-57445421/', photo: 'https://i.imgur.com/7o3Luik.jpeg' }
       ]
     }
   };
