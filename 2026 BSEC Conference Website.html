@@ -933,6 +933,22 @@ a { color: inherit; text-decoration: none; }
   margin-top: 1rem;
 }
 .agenda-cta-row .btn { width: auto; }
+.venture-showcase-embed {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  border: 1px solid var(--cream-dk);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.82);
+}
+.venture-showcase-embed[hidden] {
+  display: none;
+}
+.venture-showcase-embed iframe {
+  display: block;
+  width: 100%;
+  border: 1px solid #ccc;
+  background: transparent;
+}
 .pre-event-label {
   font-size: 0.7rem;
   font-weight: 600;
@@ -1038,11 +1054,23 @@ a { color: inherit; text-decoration: none; }
 .sponsor-logo-box.mark-donohue-card {
   height: auto;
   min-width: 0;
+  min-width: 240px;
   padding: 1.25rem 1.5rem;
   flex-direction: column;
   align-items: center;
   background: var(--g-deep);
   border-color: rgba(255,255,255,0.12);
+}
+.sponsor-logo-box.mark-fund-logo-card {
+  min-width: 240px;
+  height: auto;
+  min-height: 170px;
+  padding: 1.4rem 1.5rem;
+}
+.sponsor-logo-box.mark-fund-logo-card .sponsor-fund-logo {
+  max-width: 260px;
+  max-height: 130px;
+  margin: 0 auto;
 }
 .sponsor-logo-box.mark-donohue-card:hover { border-color: var(--g-light); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
 .sponsor-logo-box.mark-donohue-card .sponsor-person-name a {
@@ -1587,7 +1615,7 @@ footer {
         <div class="agenda-content">
           <h4>20th Anniversary VIP Dinner</h4>
           <p class="agenda-venue">St. Lawrence Room &nbsp;&middot;&nbsp; Executive Education Center, Babson College</p>
-          <p><em>Hosted by Mark Donohue B&rsquo;89, Honorary Chairman of the BSEC Conference and Co-Founder of the Conference.</em> An intimate gathering of past BSEC co-presidents, keynote speakers, sponsors, and select members of the Babson community. An evening of reconnection and reflection ahead of the 20th anniversary milestone. By invitation only.</p>
+          <p><em>Hosted by Mark T. Donohue B&rsquo;89, Honorary Chairman of the BSEC Conference and Co-Founder of the Conference.</em> An intimate gathering of past BSEC co-presidents, keynote speakers, sponsors, and select members of the Babson community. An evening of reconnection and reflection ahead of the 20th anniversary milestone. By invitation only.</p>
           <div class="agenda-tracks">
             <span class="agenda-track-pill invite-only">&#x2709; By Invitation Only</span>
           </div>
@@ -1720,12 +1748,12 @@ footer {
         <div class="agenda-time">10:30 &ndash; 11:00 AM</div>
         <div class="agenda-node major"></div>
         <div class="agenda-content">
-          <h4>Entrepreneurs for Impact &mdash; Mark Donohue</h4>
+          <h4>Entrepreneurs for Impact &mdash; Mark T. Donohue</h4>
           <p>39 years of impact entrepreneurship. A perspective on AI, exponential technology, and entrepreneurship as the most powerful force for positive change in the world &mdash; and what it means to build with purpose in this era.</p>
           <div class="agenda-speaker">
-            <div class="agenda-speaker-photo" style="background-image:url('https://i.imgur.com/8DIULnv.jpeg');" aria-hidden="true"></div>
+            <div class="agenda-speaker-photo" style="background-image:url('https://i.imgur.com/FJYE7n5.jpeg');" aria-hidden="true"></div>
             <div class="agenda-speaker-info">
-              <div class="agenda-speaker-name"><a href="https://www.linkedin.com/in/markdonohue123/" target="_blank" rel="noopener noreferrer">Mark Donohue</a></div>
+              <div class="agenda-speaker-name"><a href="https://www.linkedin.com/in/markdonohue123/" target="_blank" rel="noopener noreferrer">Mark T. Donohue</a></div>
               <div class="agenda-speaker-designation">Babson &rsquo;89 &middot; Honorary Conference Chair</div>
               <div class="agenda-speaker-title">Babson Cleantech Entrepreneur-in-Residence, 2008&ndash;2013</div>
             </div>
@@ -1743,6 +1771,7 @@ footer {
           <h4>Introductory Remarks: David Evans Shaw</h4>
           <p>Cindy Klein Marmer offers introductory remarks to welcome keynote speaker David Evans Shaw to the stage.</p>
           <div class="agenda-speaker">
+            <div class="agenda-speaker-photo" style="background-image:url('https://i.imgur.com/QuotYYC.jpeg');" aria-hidden="true"></div>
             <div class="agenda-speaker-info">
               <div class="agenda-speaker-name"><a href="https://www.linkedin.com/in/cindy-klein-marmer" target="_blank" rel="noopener noreferrer">Cindy Klein Marmer</a></div>
               <div class="agenda-speaker-designation">MBA &rsquo;02 &middot; P&rsquo;29</div>
@@ -1756,20 +1785,20 @@ footer {
         <div class="agenda-node major"></div>
         <div class="agenda-content">
           <h4>Keynote: David Evans Shaw</h4>
-          <p>A lifelong builder of companies, ideas, and impact. Pioneer behind more than a dozen science-driven enterprises valued at over $50 billion. David&rsquo;s work spans business, public health, ocean conservation, and beyond &mdash; united by a single idea: leadership success should be measured by impact.</p>
+          <p>Our newest confirmed conference keynote is David Evans Shaw, the Founder of two diagnostics companies with over $50 billion in market capitalization and a globally recognized leader in science, conservation, and environmental stewardship.</p>
           <div class="agenda-speaker">
             <div class="agenda-speaker-photo" style="background-image:url('https://i.imgur.com/mWhrAS3.png');" aria-hidden="true"></div>
             <div class="agenda-speaker-info">
               <div class="agenda-speaker-name"><a href="https://www.linkedin.com/in/david-e-shaw-806b229/" target="_blank" rel="noopener noreferrer">David Evans Shaw</a></div>
-              <div class="agenda-speaker-designation">CEO, Black Point Group</div>
+              <div class="agenda-speaker-designation">Founder, IDEXX Labs (Fortune 500)</div>
               <div class="agenda-speaker-title">Author, <em>Wave Making: Inspired By Impact</em></div>
             </div>
           </div>
           <div class="agenda-keynote-bio">
-            <p>David Evans Shaw is a lifelong business and social entrepreneur&mdash;a builder of companies, ideas, and impact. As CEO of Black Point Group, he has helped create more than a dozen science-driven enterprises valued at over $50 billion, advancing healthcare and innovation worldwide.</p>
-            <p>But his work extends far beyond business&mdash;into education, science policy, public health, international affairs, the arts, capitalism reform, mental health, and the global conservation of nature including oceans.</p>
-            <p>He has championed the powerful idea that leadership success should be measured by impact. In his book <em>Wave Making: Inspired By Impact</em>, he invites all of us to step forward&mdash;not as spectators, but as changemakers&hellip; or as he calls them: wave makers&hellip; for a better world.</p>
-            <p><em>Beyond business, David has been a leading voice in global ocean stewardship &mdash; championing science-based conservation, marine policy, and sustainable ocean economies as a pathway to a healthier planet.</em></p>
+            <p>David Evans Shaw is a lifelong business and social entrepreneur, a builder of companies, ideas, and impact. He is the Founder of two diagnostics companies with over $50 billion in market capitalization, including IDEXX Labs, while advancing healthcare innovation worldwide.</p>
+            <p>David brings a rare combination of business leadership and impact-driven entrepreneurship, which matches the theme for our 20th annual Babson College Energy, Sustainability and Impact Conference, Entrepreneurs for Impact.</p>
+            <p>His work spans education, science policy, public health, international affairs, the arts, capitalism reform, mental health, and the global conservation of nature, including oceans. In his book <em>Wave Making: Inspired By Impact</em>, he invites all of us to step forward as changemakers and wave makers for a better world.</p>
+            <p><em>Beyond business, David has been a leading voice in global ocean stewardship, championing science-based conservation, marine policy, and sustainable ocean economies as a pathway to a healthier planet.</em></p>
             <p><em>At this year&rsquo;s 20th Annual BSEC Conference, David will receive the inaugural Entrepreneur for Impact Award in recognition of his decades of leadership building enterprises that measure success by their impact on people and the planet.</em></p>
           </div>
           <div class="agenda-tracks">
@@ -1813,6 +1842,12 @@ footer {
             <span class="agenda-track-pill">Student Ventures</span>
             <span class="agenda-track-pill">Expo Hall</span>
             <span class="agenda-track-pill">Open Walk-Around</span>
+          </div>
+          <div class="agenda-cta-row">
+            <button type="button" class="btn btn-outline-dark btn-sm" id="venture-showcase-toggle" aria-expanded="false" aria-controls="venture-showcase-exhibitors">Show Exhibitors</button>
+          </div>
+          <div id="venture-showcase-exhibitors" class="venture-showcase-embed" hidden>
+            <iframe class="airtable-embed" src="https://airtable.com/embed/appN1XnDaeYmjXUY4/shrG0DhHM9pdgafqL?viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
           </div>
         </div>
       </div>
@@ -1861,7 +1896,7 @@ footer {
       <div class="speaker-card reveal reveal-delay-1">
         <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/mWhrAS3.png');"></div>
         <div class="speaker-name">David Evans Shaw</div>
-        <div class="speaker-role">CEO, Black Point Group &middot; Author, <em>Wave Making: Inspired By Impact</em></div>
+        <div class="speaker-role">Founder, IDEXX Labs (Fortune 500) &middot; Author, <em>Wave Making: Inspired By Impact</em></div>
         <div class="speaker-org">Headline Keynote</div>
         <div class="speaker-links">
           <a href="https://www.linkedin.com/in/david-e-shaw-806b229/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
@@ -1913,12 +1948,39 @@ footer {
         </div>
       </div>
       <div class="speaker-card reveal reveal-delay-3">
-        <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/8DIULnv.jpeg');"></div>
-        <div class="speaker-name">Mark Donohue</div>
+        <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/FJYE7n5.jpeg');"></div>
+        <div class="speaker-name">Mark T. Donohue</div>
         <div class="speaker-role">Babson &rsquo;89 &middot; Babson Cleantech EIR, 2008&ndash;2013</div>
         <div class="speaker-org">Honorary Chair</div>
         <div class="speaker-links">
           <a href="https://www.linkedin.com/in/markdonohue123/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+        </div>
+      </div>
+      <div class="speaker-card reveal">
+        <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/wUwSq8F.png');"></div>
+        <div class="speaker-name">Ryan Lee</div>
+        <div class="speaker-role">Co-President, BSEC &middot; MBA &rsquo;27, Babson College</div>
+        <div class="speaker-org">Welcome &amp; BSEC Conference Kickoff</div>
+        <div class="speaker-links">
+          <a href="https://www.linkedin.com/in/ryanchenlee/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+        </div>
+      </div>
+      <div class="speaker-card reveal reveal-delay-1">
+        <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/JEWZI2X.png');"></div>
+        <div class="speaker-name">Rashmi Tripathi</div>
+        <div class="speaker-role">Co-President, BSEC &middot; MBA &rsquo;27, Babson College</div>
+        <div class="speaker-org">Welcome &amp; BSEC Conference Kickoff</div>
+        <div class="speaker-links">
+          <a href="https://www.linkedin.com/in/rashmi-tripathi1/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+        </div>
+      </div>
+      <div class="speaker-card reveal reveal-delay-2">
+        <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/QuotYYC.jpeg');"></div>
+        <div class="speaker-name">Cindy Klein Marmer</div>
+        <div class="speaker-role">Executive Director, Arthur M. Blank Center for Entrepreneurship</div>
+        <div class="speaker-org">Introductory Remarks</div>
+        <div class="speaker-links">
+          <a href="https://www.linkedin.com/in/cindy-klein-marmer" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
         </div>
       </div>
       <div class="speaker-card reveal">
@@ -2083,6 +2145,33 @@ footer {
           <a href="https://www.linkedin.com/in/josecarce/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
         </div>
       </div>
+      <div class="speaker-card reveal reveal-delay-3">
+        <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/r2bnMVd.jpeg');"></div>
+        <div class="speaker-name">Ravi Karkara</div>
+        <div class="speaker-role">Co-Founder, Global Air Water Generation Initiative</div>
+        <div class="speaker-org">Panelist &middot; Food &amp; Agriculture for Impact</div>
+        <div class="speaker-links">
+          <a href="https://www.linkedin.com/in/ravikarkara/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+        </div>
+      </div>
+      <div class="speaker-card reveal">
+        <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/ecWdjkm.png');"></div>
+        <div class="speaker-name">Prof. Margaret Hassey</div>
+        <div class="speaker-role">Environmental Studies, 2025 &middot; Academic Council on the United Nations System Representative, ACUNS</div>
+        <div class="speaker-org">Panelist &middot; Fashion for Impact</div>
+        <div class="speaker-links">
+          <a href="https://www.linkedin.com/in/meg-hassey/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+        </div>
+      </div>
+      <div class="speaker-card reveal reveal-delay-1">
+        <div class="speaker-avatar" style="background-image:url('https://i.imgur.com/XDTPcMm.png');"></div>
+        <div class="speaker-name">Bukonla Adeniyi</div>
+        <div class="speaker-role">Founder, Vesy and Ori-Lane Africa Fashion Digital Platform &middot; MBA Presidential Scholar, Babson College</div>
+        <div class="speaker-org">Panelist &middot; Fashion for Impact</div>
+        <div class="speaker-links">
+          <a href="https://www.linkedin.com/in/bukonla-bernice-adeniyi/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -2152,12 +2241,15 @@ footer {
           <div class="tier-line"></div>
         </div>
         <div class="tier-logos">
-          <div class="sponsor-logo-box mark-donohue-card reveal">
-            <img src="https://i.imgur.com/tZlMJuz.jpeg" alt="Mark Donohue fund logo" class="sponsor-fund-logo">
-            <div class="sponsor-person-name"><a href="https://www.linkedin.com/in/markdonohue123/" target="_blank" rel="noopener noreferrer">Mark Donohue</a></div>
-            <div class="sponsor-person-role">Babson &rsquo;89 &nbsp;·&nbsp; Babson Cleantech Entrepreneur-in-Residence, 2008&ndash;2013</div>
+          <div class="sponsor-logo-box mark-fund-logo-card reveal">
+            <img src="https://i.imgur.com/tZlMJuz.jpeg" alt="Mark T. Donohue fund logo" class="sponsor-fund-logo">
           </div>
-          <div class="sponsor-logo-box placeholder">Presenting Sponsor · TBD</div>
+          <div class="sponsor-logo-box mark-donohue-card reveal">
+            <div class="sponsor-person-avatar" style="background-image:url('https://i.imgur.com/FJYE7n5.jpeg');" aria-hidden="true"></div>
+            <div class="sponsor-person-name"><a href="https://www.linkedin.com/in/markdonohue123/" target="_blank" rel="noopener noreferrer">Mark T. Donohue</a></div>
+            <div class="sponsor-person-role">Babson &rsquo;89 &nbsp;·&nbsp; Babson Cleantech Entrepreneur-in-Residence, 2008&ndash;2013</div>
+            <div class="sponsor-person-title">Presenting Sponsor</div>
+          </div>
         </div>
       </div>
 
@@ -2167,7 +2259,6 @@ footer {
           <div class="tier-line"></div>
         </div>
         <div class="tier-logos">
-          <div class="sponsor-logo-box placeholder">Gold Sponsor · TBD</div>
         </div>
       </div>
 
@@ -2184,7 +2275,7 @@ footer {
           </div>
           <div class="sponsor-logo-box">
             <a href="https://www.babson.edu/sustainability/" target="_blank" rel="noopener noreferrer">
-              <img src="https://i.imgur.com/6CM0Kpk.jpeg" alt="Babson Greenworks logo">
+              <img src="https://i.imgur.com/cgkyXET.jpeg" alt="Babson Greenworks logo">
             </a>
           </div>
           <div class="sponsor-logo-box">
@@ -2211,6 +2302,11 @@ footer {
               <img src="https://i.imgur.com/1AIFbBr.png" alt="ReVision Energy logo">
             </a>
           </div>
+          <div class="sponsor-logo-box">
+            <a href="https://www.linkedin.com/company/jsb-industries" target="_blank" rel="noopener noreferrer">
+              <img src="https://i.imgur.com/UG4obV9.jpeg" alt="JSB Industries logo">
+            </a>
+          </div>
         </div>
       </div>
 
@@ -2224,6 +2320,22 @@ footer {
             <a href="https://www.fomuicecream.com/" target="_blank" rel="noopener noreferrer" style="display: flex; flex-direction: column; align-items: center; gap: 0.55rem; text-decoration: none; color: inherit;">
               <img src="https://i.imgur.com/WnOTaHD.jpeg" alt="FoMu logo">
               <span style="font-family: var(--sans); font-size: 0.72rem; font-weight: 400; line-height: 1.5; letter-spacing: 0.02em; color: var(--ink-soft);">Treats made in-kind by Deena Jalal, Founder, Chief Marketing Officer of FoMu (Babson MBA&rsquo;10).</span>
+            </a>
+          </div>
+          <div class="sponsor-logo-box" style="min-width: 260px; max-width: 340px; height: auto; min-height: 56px; flex-direction: column; gap: 0.55rem; padding: 0.85rem 1.25rem; text-align: center;">
+            <a href="https://muffintown.com/" target="_blank" rel="noopener noreferrer" style="display: flex; flex-direction: column; align-items: center; gap: 0.55rem; text-decoration: none; color: inherit;">
+              <img src="https://i.imgur.com/OyTii99.png" alt="Muffin Town logo">
+              <span style="font-family: var(--sans); font-size: 0.72rem; font-weight: 400; line-height: 1.5; letter-spacing: 0.02em; color: var(--ink-soft);">Treats made in-kind by Brian Anderson, Vice President, JSB Industries (Babson &rsquo;96 MBA&rsquo;05).</span>
+            </a>
+          </div>
+          <div class="sponsor-logo-box">
+            <a href="https://redbull.com/" target="_blank" rel="noopener noreferrer">
+              <img src="https://i.imgur.com/kPDokbG.png" alt="Red Bull logo">
+            </a>
+          </div>
+          <div class="sponsor-logo-box">
+            <a href="https://www.marriott.com/" target="_blank" rel="noopener noreferrer">
+              <img src="https://i.imgur.com/pWVroHd.jpeg" alt="Marriott International logo">
             </a>
           </div>
         </div>
@@ -2451,7 +2563,9 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
       meta: '1:15-2:00 PM · Malloy 102',
       blurb: 'Sustainable fashion value chains, materials, and circular models.',
       speakers: [
-        { name: 'Caroline Daniels', designation: 'Moderator', title: 'Fashion for Impact', linkedin: 'https://www.linkedin.com/in/danielscaroline/', photo: 'https://i.imgur.com/wDijGf3.png' }
+        { name: 'Caroline Daniels', designation: 'Moderator', title: 'Fashion for Impact', linkedin: 'https://www.linkedin.com/in/danielscaroline/', photo: 'https://i.imgur.com/wDijGf3.png' },
+        { name: 'Prof. Margaret Hassey', designation: 'Panelist', title: 'Environmental Studies, 2025 - Academic Council on the United Nations System Representative, ACUNS', linkedin: 'https://www.linkedin.com/in/meg-hassey/', photo: 'https://i.imgur.com/ecWdjkm.png' },
+        { name: 'Bukonla Adeniyi', designation: 'Panelist', title: 'Entrepreneur and Founder of Fashion Brand Vesy and Ori-Lane Africa Fashion Digital Platform for African Fashion, and MBA Presidential Scholar at Babson College', linkedin: 'https://www.linkedin.com/in/bukonla-bernice-adeniyi/', photo: 'https://i.imgur.com/XDTPcMm.png' }
       ]
     },
     energy: {
@@ -2473,7 +2587,8 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
       speakers: [
         { name: 'Jen Faigel', designation: 'Panelist', title: 'Co-Founder & Executive Director, CommonWealth Kitchen', linkedin: 'https://www.linkedin.com/in/jenfaigel/', photo: 'https://i.imgur.com/KZHhgMl.png' },
         { name: 'Christopher Rassias', designation: 'Panelist', title: 'VP Business Development · Bright Feeds', linkedin: 'https://www.linkedin.com/in/christopher-rassias-793a8234/', photo: 'https://i.imgur.com/1juMikj.jpeg' },
-        { name: 'JC Arce', designation: 'Panelist', title: 'Co-Founder & CEO, Tidefield', linkedin: 'https://www.linkedin.com/in/josecarce/', photo: 'https://i.imgur.com/502eGWi.png' }
+        { name: 'JC Arce', designation: 'Panelist', title: 'Co-Founder & CEO, Tidefield', linkedin: 'https://www.linkedin.com/in/josecarce/', photo: 'https://i.imgur.com/502eGWi.png' },
+        { name: 'Ravi Karkara', designation: 'Panelist', title: 'Co-Founder, Global Air Water Generation Initiative', linkedin: 'https://www.linkedin.com/in/ravikarkara/', photo: 'https://i.imgur.com/r2bnMVd.jpeg' }
       ]
     },
     vc: {
@@ -2576,6 +2691,20 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
   updateCountdown();
   setInterval(updateCountdown, 60000);
+})();
+
+// ── Venture showcase exhibitors toggle
+(function() {
+  const toggle = document.getElementById('venture-showcase-toggle');
+  const panel = document.getElementById('venture-showcase-exhibitors');
+  if (!toggle || !panel) return;
+
+  toggle.addEventListener('click', () => {
+    const shouldShow = panel.hasAttribute('hidden');
+    panel.toggleAttribute('hidden', !shouldShow);
+    toggle.setAttribute('aria-expanded', shouldShow ? 'true' : 'false');
+    toggle.textContent = shouldShow ? 'Hide Exhibitors' : 'Show Exhibitors';
+  });
 })();
 </script>
 </body>
